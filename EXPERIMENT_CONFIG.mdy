@@ -1,0 +1,18 @@
+Model: LinearSVC + TF-IDF (1–2 grams)
+Calibration: sigmoid (cv=2/3 depending on class counts)
+
+Evaluation:
+- 5-fold Stratified CV
+- Holdout test (20%)
+
+Metrics:
+- Macro F1 (primary)
+- Confusion matrix
+- Per-class precision/recall
+
+Safety Layer:
+- Emergency keyword override
+- Low-confidence fallback planned
+
+Random Seed: 42
+

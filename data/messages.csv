@@ -1,0 +1,671 @@
+text,category,priority
+"Charged twice for my appointment, please refund.",billing,4
+"App crashes when I open Diet Plans.",tech_bug,3
+"I need to reschedule my consultation to tomorrow.",appointment,2
+"My blood sugar is extremely high and I feel unwell.",medical,5
+"Thanks, everything works now.",other,1
+"Charged twice for my appointment, please refund.",billing,4
+"I was billed two times for the same booking.",billing,4
+"My card was charged but the booking didn’t confirm.",billing,4
+"I paid but didn’t receive a confirmation email.",billing,3
+"Payment failed but my bank shows it went through.",billing,4
+"Can I get a receipt for my consultation payment?",billing,2
+"I need a refund—payment went through by mistake.",billing,4
+"Subscription charged me after I cancelled.",billing,4
+"Price shown is different from what I was charged.",billing,3
+"Apple Pay charged me but the app says unpaid.",billing,4
+"App crashes when I open Diet Plans.",tech_bug,3
+"The app freezes on the home screen after I log in.",tech_bug,3
+"I can’t upload my glucose reading, it keeps failing.",tech_bug,3
+"My tracker page won’t load—just a blank screen.",tech_bug,3
+"Notifications aren’t working even though they’re enabled.",tech_bug,2
+"The button for booking doesn’t do anything.",tech_bug,3
+"I get an error when I try to save a meal.",tech_bug,3
+"The app logs me out randomly.",tech_bug,2
+"Login code never arrives to my email.",tech_bug,2
+"The app is very slow since the last update.",tech_bug,2
+"I need to reschedule my consultation to tomorrow.",appointment,2
+"Can you cancel my booking for today?",appointment,2
+"I booked the wrong time slot—can you change it?",appointment,2
+"How do I book an appointment with Dr. Wisam?",appointment,1
+"I can’t find any available times this week.",appointment,2
+"Do you have appointments on weekends?",appointment,1
+"I missed my appointment—can I rebook?",appointment,2
+"Please confirm my appointment time.",appointment,1
+"I want to change the appointment to next week.",appointment,2
+"I didn’t get the meeting link for my consultation.",appointment,3
+"My blood sugar is extremely high and I feel unwell.",medical,5
+"I’m feeling dizzy and my sugar feels low.",medical,4
+"I had a severe low last night, what should I do?",medical,4
+"My readings have been high for 3 days straight.",medical,3
+"I feel shaky and sweaty after taking insulin.",medical,4
+"I have nausea and I can’t keep food down.",medical,4
+"I’m confused about my insulin dose today.",medical,3
+"My sugar drops after exercise—how can I prevent it?",medical,3
+"I’m worried about repeated night-time lows.",medical,4
+"I have chest pain and shortness of breath.",medical,5
+"Thanks, the app is really helpful.",other,1
+"Love the design—great job.",other,1
+"Can you add dark mode?",other,1
+"Feature request: add more meal options.",other,1
+"I have a suggestion for the home screen layout.",other,1
+"How does the meal plan feature work?",other,2
+"Where can I see my weekly summary?",other,2
+"Do you support Arabic language in the app?",other,1
+"Just testing the support chat.",other,1
+"Can you explain what the numbers mean in general?",other,2
+"I was charged but the appointment page still says pending.",billing,3
+"Refund request: I cancelled but got billed anyway.",billing,4
+"Payment went through twice on my card.",billing,4
+"My invoice is wrong, it shows the wrong amount.",billing,2
+"Do you accept e-transfer or only cards?",billing,1
+"I can’t download my receipt for the consultation.",billing,2
+"I used promo code but it didn’t apply.",billing,2
+"Why did the price change at checkout?",billing,3
+"I got charged in a different currency than expected.",billing,3
+"Please cancel my subscription and stop future charges.",billing,3
+
+"App stuck on loading screen after update.",tech_bug,3
+"It says ‘something went wrong’ when I try to book.",tech_bug,3
+"My profile photo upload fails every time.",tech_bug,2
+"The app keeps crashing when I tap Tracker.",tech_bug,3
+"I can’t sign in, it keeps saying invalid code.",tech_bug,2
+"The meal plan page is blank for me.",tech_bug,3
+"Push notifications come hours late.",tech_bug,2
+"The calendar won’t scroll, it freezes.",tech_bug,2
+"Error 500 when saving my glucose reading.",tech_bug,3
+"I can’t reset my password, link doesn’t work.",tech_bug,2
+
+"Can I move my appointment from 3pm to 5pm today?",appointment,2
+"I need to book an urgent consultation this week.",appointment,3
+"Is there a way to choose a different doctor?",appointment,1
+"I accidentally booked two slots—please cancel one.",appointment,2
+"I can’t join the call, can you resend the link?",appointment,3
+"What is the appointment duration?",appointment,1
+"Can I book for my parent using my account?",appointment,2
+"Do you offer same-day appointments?",appointment,2
+"I want to confirm the timezone for my booking.",appointment,2
+"I need to change the email on my appointment.",appointment,2
+
+"My sugar is low right now and I feel shaky.",medical,4
+"I had two lows this week after dinner.",medical,3
+"My fasting numbers are higher than usual lately.",medical,3
+"I keep getting spikes after rice—what should I adjust?",medical,3
+"I took insulin and now I feel dizzy and sweaty.",medical,4
+"I’m vomiting and my sugar is high.",medical,4
+"I think I have ketones and I feel nauseous.",medical,5
+"My vision is blurry and my sugar is very high.",medical,4
+"I feel confused and my sugar is low.",medical,4
+"Severe headache and shortness of breath.",medical,5
+
+"The app is amazing, thank you.",other,1
+"Can you add a widget for quick logging?",other,1
+"I’m new—where do I start in the app?",other,2
+"How do I change my units to mmol/L?",other,2
+"Can I export my data to PDF?",other,2
+"Is there a way to delete an entry I logged by mistake?",other,2
+"Do you have a tutorial video for the tracker?",other,1
+"Suggestion: add reminders for water and meds.",other,1
+"Can you add an option to hide my streak?",other,1
+"Just saying hi, testing support.",other,1
+"I got charged but I never received a booking confirmation.",billing,3
+"The refund is taking too long, can you update me?",billing,3
+"My payment was declined but the app still shows paid.",billing,3
+"I was charged a fee I don’t recognize.",billing,3
+"Can you resend the receipt to my email?",billing,2
+"I accidentally paid twice—please reverse one payment.",billing,4
+"My bank shows pending charge but I cancelled.",billing,2
+"The promo discount didn’t apply to my purchase.",billing,2
+"Why was I billed after my free trial?",billing,3
+"I want to update my payment method.",billing,2
+"I can’t complete checkout, it loops back to payment.",billing,3
+"Payment link opens but then nothing happens.",billing,3
+"I was charged for a session I didn’t attend.",billing,3
+"Can I pay later or must I pay upfront?",billing,1
+"The refund amount is less than what I paid.",billing,3
+
+"The app keeps spinning when I try to load my history.",tech_bug,2
+"I see a blank white screen after logging in.",tech_bug,3
+"My charts are missing for this week.",tech_bug,2
+"It crashes when I tap the Messages button.",tech_bug,3
+"My saved meals disappeared.",tech_bug,3
+"I can’t add a new glucose entry, save button does nothing.",tech_bug,3
+"The keyboard covers the send button in chat.",tech_bug,2
+"The app says offline even though my internet works.",tech_bug,2
+"I’m stuck in an infinite login loop.",tech_bug,3
+"The calendar shows wrong dates.",tech_bug,2
+"I can’t change my profile settings, it won’t save.",tech_bug,2
+"I’m getting duplicate notifications.",tech_bug,2
+"It logs me out every few minutes.",tech_bug,3
+"The app crashes on startup.",tech_bug,3
+"Error code 401 when I try to sign in.",tech_bug,3
+
+"Can you move my booking to next Monday?",appointment,2
+"I need to cancel and get a new time slot.",appointment,2
+"How do I see my upcoming appointments?",appointment,1
+"I booked but I can’t find it in my schedule.",appointment,2
+"The time options are all full—any cancellations?",appointment,2
+"Can I book two appointments in one week?",appointment,1
+"I need an appointment urgently, my numbers are high.",appointment,3
+"Please change the appointment from in-person to online.",appointment,2
+"I missed the call because of timezone confusion.",appointment,3
+"Can you confirm the doctor will attend on time?",appointment,1
+"I joined the meeting but no one was there.",appointment,3
+"Can I get a reminder before the appointment?",appointment,1
+"I need to change the phone number for my booking.",appointment,2
+"How do I reschedule without paying again?",appointment,2
+"Can I book an appointment for today?",appointment,2
+
+"My sugar is very low and I feel weak.",medical,4
+"I keep getting lows at night, it’s scary.",medical,4
+"My sugar is high after every meal lately.",medical,3
+"I’m not sure if I should adjust my insulin dose.",medical,3
+"I have ketones and I’m vomiting.",medical,5
+"I feel shaky, sweaty, and confused.",medical,4
+"My fasting sugar is consistently high this week.",medical,3
+"I had a low after exercise again.",medical,3
+"I feel dizzy and nauseous with high sugar.",medical,4
+"My readings are erratic and I don’t know why.",medical,3
+"I’m having blurred vision and a bad headache.",medical,4
+"I can’t breathe well and my chest hurts.",medical,5
+"I’m worried my sugar is dropping too fast.",medical,4
+"My insulin pen might not be working.",medical,3
+"I feel extremely thirsty and my sugar is very high.",medical,4
+
+"Can you add a search feature for meals?",other,1
+"Where do I change my notification settings?",other,2
+"How do I contact the doctor directly?",other,2
+"Is my data private and secure?",other,2
+"Can you add Arabic support for the whole app?",other,1
+"I don’t understand the dashboard, can you guide me?",other,2
+"How do I delete my account?",other,2
+"Suggestion: add a dark mode toggle in settings.",other,1
+"Can I download my logs as CSV?",other,2
+"Can you explain what HbA1c means?",other,2
+"Thanks for the quick support.",other,1
+"This app is super helpful.",other,1
+"Can you add more reminders options?",other,1
+"Where can I report a bug?",other,2
+"Just checking if support is online.",other,1
+"I was charged but the appointment didn’t show up in my account.",billing,3
+"My refund status says processed but I didn’t receive it.",billing,3
+"I got a receipt but it has the wrong date.",billing,2
+"Can you change the billing email on my receipt?",billing,2
+"I was charged again even though I already paid.",billing,4
+"My payment is stuck on pending for hours.",billing,2
+"The checkout page shows an extra fee at the end.",billing,3
+"I paid for premium but the app still shows free.",billing,3
+"Is there a student discount available?",billing,1
+"Can you refund a duplicate charge from today?",billing,4
+"I was charged but the app crashed during payment.",billing,3
+"My card was charged for the wrong plan.",billing,3
+"I need a full refund, I cancelled immediately.",billing,4
+"Payment succeeded but the session wasn’t created.",billing,4
+"Why is the tax amount so high on my invoice?",billing,2
+
+"The app won’t open past the splash screen.",tech_bug,3
+"I get a black screen when I open the tracker.",tech_bug,3
+"The meal images are not loading for me.",tech_bug,2
+"It crashes when I try to open Courses.",tech_bug,3
+"My reminders are not firing at all.",tech_bug,2
+"I can’t scroll in the meal plan list.",tech_bug,2
+"The back button doesn’t work on some pages.",tech_bug,2
+"The chat messages don’t send, it just says retry.",tech_bug,3
+"I see ‘network error’ but my wifi is fine.",tech_bug,2
+"The app duplicates my glucose entries.",tech_bug,2
+"My saved appointments disappeared from the calendar.",tech_bug,3
+"The app shows wrong units for glucose.",tech_bug,3
+"It keeps asking me to log in every time I open it.",tech_bug,2
+"I can’t update my profile name.",tech_bug,2
+"I’m getting an error when I upload a meal photo.",tech_bug,2
+
+"Can you reschedule my appointment to Friday evening?",appointment,2
+"I need to move my booking to a different day.",appointment,2
+"Is there an earlier slot available today?",appointment,2
+"Can I change my appointment type to phone call?",appointment,2
+"I didn’t receive the confirmation for my booking.",appointment,3
+"Can you confirm the link for my consultation?",appointment,2
+"I need to book an appointment for my child.",appointment,2
+"How far in advance can I book?",appointment,1
+"Can I book two different doctors?",appointment,1
+"I want to cancel and get a refund for the booking.",appointment,3
+"The consultation link says invalid meeting.",appointment,3
+"My appointment time changed on its own.",appointment,3
+"I need to change the appointment location.",appointment,2
+"I want to book but there are no slots showing.",appointment,2
+"Can I confirm my appointment is still on today?",appointment,1
+
+"I feel very shaky and my sugar is low.",medical,4
+"I’m sweating and weak, I think it’s a low.",medical,4
+"My sugar has been high since yesterday night.",medical,3
+"I keep spiking after breakfast every day.",medical,3
+"I’m confused about whether to take insulin now.",medical,3
+"I vomited twice and my sugar is high.",medical,4
+"I have ketones and I feel sick.",medical,5
+"My chest feels tight and I can’t breathe well.",medical,5
+"I fainted earlier and I’m worried.",medical,5
+"I have blurred vision and feel dizzy.",medical,4
+"My sugar is low and I feel confused.",medical,4
+"I have severe headache and nausea.",medical,4
+"I’m extremely thirsty and peeing a lot with high sugar.",medical,4
+"My insulin dose might be wrong.",medical,3
+"I’m having repeated night lows this week.",medical,4
+
+"Great app—please keep improving it.",other,1
+"Can you add a notes section for each glucose reading?",other,1
+"How do I change the language to Arabic?",other,2
+"Where do I find my past meal logs?",other,2
+"Can I turn off email notifications?",other,2
+"Is there a way to share my report with my doctor?",other,2
+"Suggestion: add a quick add button on the home page.",other,1
+"How do I edit a meal I entered wrong?",other,2
+"Can you add Apple Health integration?",other,1
+"How do I update my profile email?",other,2
+"Do you have an Android version?",other,1
+"Where can I see my subscription status?",other,2
+"I don’t see the weekly summary card anymore.",other,2
+"Can you add more recipes in the meal plan?",other,1
+"Just testing again, ignore this.",other,1
+"I was charged but my appointment was cancelled.",billing,3
+"The app shows unpaid even though my card was charged.",billing,3
+"I need a refund for an accidental purchase.",billing,3
+"Can you refund the second charge?",billing,4
+"I can’t find my receipt in the app.",billing,2
+"Billing address is wrong on my invoice.",billing,2
+"The subscription renewed without warning.",billing,3
+"I was charged for premium but features are locked.",billing,3
+"My payment failed and I was still charged.",billing,4
+"Is there any discount code available?",billing,1
+"I want to update my card details.",billing,2
+"The checkout keeps timing out.",billing,3
+"I got charged but got an error message.",billing,3
+"Why did I get charged twice this month?",billing,4
+"Can you email me a detailed receipt?",billing,2
+
+"The app crashes when I open Appointments.",tech_bug,3
+"I can’t type in the message box, it freezes.",tech_bug,2
+"My dashboard numbers don’t update.",tech_bug,2
+"The app keeps showing a blank screen on Meal Plans.",tech_bug,3
+"I can’t log my meal, the save icon is greyed out.",tech_bug,3
+"Images are pixelated or not loading.",tech_bug,2
+"I’m seeing duplicated entries in my tracker.",tech_bug,2
+"The app keeps restarting by itself.",tech_bug,3
+"Notifications are turned on but I get none.",tech_bug,2
+"I’m stuck on verifying code.",tech_bug,2
+"It says server error when I try to submit support.",tech_bug,3
+"The calendar won’t show any slots.",tech_bug,2
+"The app is laggy when scrolling.",tech_bug,2
+"I can’t change my password.",tech_bug,2
+"The app logs me out after a few seconds.",tech_bug,3
+
+"Can you book me the earliest available slot?",appointment,2
+"I need to change my appointment date.",appointment,2
+"Can I reschedule to next week without extra charge?",appointment,2
+"I need help joining my consultation call.",appointment,3
+"My appointment got cancelled automatically.",appointment,3
+"Can you confirm my appointment is online?",appointment,1
+"Is there a waiting list for appointments?",appointment,1
+"Can I book an appointment for a family member?",appointment,2
+"I didn’t receive a reminder for my appointment.",appointment,2
+"The meeting link won’t open.",appointment,3
+"Can I switch my appointment to a different time today?",appointment,2
+"How long is the consultation session?",appointment,1
+"I want to cancel my appointment and get a refund.",appointment,3
+"I can’t see my appointment in the schedule.",appointment,2
+"Can I book an appointment for tomorrow?",appointment,2
+
+"My sugar is low and I’m shaking.",medical,4
+"I feel dizzy and my sugar is very low.",medical,4
+"My sugar is very high and I feel nauseous.",medical,4
+"I have ketones and I’m vomiting a lot.",medical,5
+"I keep having lows after insulin.",medical,3
+"I’m confused about what dose to take.",medical,3
+"My fasting sugar is high every morning.",medical,3
+"I have blurred vision and chest tightness.",medical,5
+"I fainted and I feel weak.",medical,5
+"I feel short of breath and chest pain.",medical,5
+"My sugar drops during workouts.",medical,3
+"I’m having repeated night-time lows.",medical,4
+"I’m extremely thirsty and my sugar is high.",medical,4
+"I feel weak and sweaty after dinner.",medical,4
+"I have severe headache with high sugar.",medical,4
+
+"Can you add more meal plan options?",other,1
+"How do I change my email address?",other,2
+"Where can I find the help center?",other,2
+"Can you explain what the tracker does?",other,2
+"Feature request: add Apple Health sync.",other,1
+"Is there a way to export my weekly report?",other,2
+"How do I edit a glucose entry?",other,2
+"The app looks great, thank you.",other,1
+"Can you add dark mode please?",other,1
+"Just a quick question: where is settings?",other,2
+"Do you have a guide for beginners?",other,2
+"Suggestion: add push reminders for meds.",other,1
+"Can I delete my account permanently?",other,2
+"How do I contact support outside the app?",other,2
+"Testing message, ignore.",other,1
+"I was charged but I can’t find the transaction in my account.",billing,3
+"I need a refund because I was billed after cancelling.",billing,4
+"My payment shows successful but the booking did not appear.",billing,4
+"Can you send a receipt with full details (tax, date, amount)?",billing,2
+"I think I was overcharged for the consultation.",billing,3
+"The subscription renewal charge was unexpected.",billing,3
+"I want to switch from monthly to yearly billing.",billing,2
+"I paid for premium and still can’t access premium content.",billing,3
+"I entered my card but checkout keeps failing.",billing,3
+"Please refund the extra charge from today.",billing,4
+
+"The app crashes when I try to open Messages.",tech_bug,3
+"Support chat won’t send my message.",tech_bug,3
+"I’m getting a ‘network error’ when saving my meal.",tech_bug,2
+"The glucose chart is not updating.",tech_bug,2
+"The app shows incorrect glucose units.",tech_bug,3
+"I can’t upload a profile picture.",tech_bug,2
+"The appointment screen is blank.",tech_bug,3
+"My login verification code expires instantly.",tech_bug,2
+"The app freezes when I scroll my history.",tech_bug,2
+"I keep getting logged out right after logging in.",tech_bug,3
+
+"Can you confirm my appointment for tomorrow morning?",appointment,1
+"I need to reschedule my appointment to next week.",appointment,2
+"I can’t join the consultation link—it says expired.",appointment,3
+"I booked an appointment but got no confirmation email.",appointment,3
+"Can I book a follow-up appointment for next month?",appointment,1
+"Do you have any late-night appointment slots?",appointment,1
+"Please cancel my appointment and rebook me.",appointment,2
+"I need to change the appointment email address.",appointment,2
+"Can I get a reminder 1 hour before my booking?",appointment,1
+"There are no available times showing for this week.",appointment,2
+
+"My sugar is low and I feel faint.",medical,5
+"I’m sweating, shaking, and my sugar is low.",medical,4
+"My sugar is very high and I feel short of breath.",medical,5
+"I’m vomiting and I think my sugar is high.",medical,4
+"I have ketones and feel very sick.",medical,5
+"I’m confused about my insulin dose for tonight.",medical,3
+"My fasting sugar is higher than usual.",medical,3
+"I keep getting spikes after lunch.",medical,3
+"I have blurry vision and feel weak.",medical,4
+"I had a severe low and felt like passing out.",medical,5
+
+"How do I turn on reminders for medication?",other,2
+"Can you add more meal choices for vegetarians?",other,1
+"Where do I see my weekly progress report?",other,2
+"How do I contact the clinic outside of the app?",other,2
+"Can you add an option to export my data as CSV?",other,2
+"Feature request: add a glucose goal setting page.",other,1
+"Can you explain what fasting glucose means?",other,2
+"I love the app, keep it up.",other,1
+"Where is the settings page located?",other,2
+"Just testing support again.",other,1
+"I was charged for an appointment that got cancelled by the system.",billing,3
+"I paid but the app says my payment is still pending.",billing,3
+"Refund me please, I was billed after I cancelled.",billing,4
+"I think you charged me twice for the same session.",billing,4
+"Can I get a receipt that includes my name and address?",billing,2
+"The receipt shows the wrong doctor name.",billing,2
+"I can’t apply the discount code at checkout.",billing,2
+"My card got charged but I got a payment error.",billing,3
+"The tax on the invoice looks incorrect.",billing,2
+"How can I change my subscription plan?",billing,2
+
+"The app crashes when I try to open the weekly summary.",tech_bug,3
+"It freezes when I try to send a support message.",tech_bug,3
+"I can’t tap the buttons on the home screen, nothing responds.",tech_bug,3
+"I’m stuck on loading after pressing Sign In.",tech_bug,3
+"The glucose value I enter doesn’t save.",tech_bug,3
+"My meal plan keeps resetting to empty.",tech_bug,2
+"The app shows duplicate appointments.",tech_bug,2
+"I can’t open the PDF export, it fails.",tech_bug,2
+"The app shows ‘server unavailable’ right now.",tech_bug,2
+"My notifications are delayed by hours.",tech_bug,2
+
+"Can you book me with the earliest available doctor slot?",appointment,2
+"I need to reschedule my appointment to tomorrow morning.",appointment,2
+"I need to cancel my consultation and pick a new time.",appointment,2
+"I can’t join the call link, it says meeting not found.",appointment,3
+"I didn’t receive the confirmation email for my booking.",appointment,3
+"Can I book two follow-ups in the same month?",appointment,1
+"What timezone are appointment times shown in?",appointment,1
+"Can you move my appointment to a later time today?",appointment,2
+"Please send the meeting link again.",appointment,3
+"Are there any weekend slots available?",appointment,1
+
+"My sugar is low and I feel like I might pass out.",medical,5
+"I have chest tightness and trouble breathing.",medical,5
+"I feel shaky and sweaty, might be a low.",medical,4
+"My sugar has been very high all day and I feel sick.",medical,4
+"I’m vomiting and my sugar is high, what should I do?",medical,5
+"I have ketones and feel nauseous.",medical,5
+"I’m confused about insulin dosing for tonight.",medical,3
+"My glucose spikes every night after dinner.",medical,3
+"I keep having night lows and waking up shaky.",medical,4
+"Blurry vision and severe headache with high sugar.",medical,4
+
+"Can you add more recipes to the meal plans?",other,1
+"Where do I find the FAQ or help page?",other,2
+"How do I change my password in the settings?",other,2
+"Can you explain what post-meal glucose means?",other,2
+"Feature request: add a streak calendar view.",other,1
+"How do I export my data to share with my doctor?",other,2
+"How do I turn off push notifications?",other,2
+"The app is great, thanks for making this.",other,1
+"Can you add support for Arabic and English toggle?",other,1
+"Just testing the support inbox again.",other,1
+"I was billed but I didn’t complete the booking.",billing,3
+"Please refund me, I was charged after cancelling my appointment.",billing,4
+"My payment went through but I can’t access what I paid for.",billing,3
+"I see two charges for the same consultation.",billing,4
+"Can you provide a receipt with tax details?",billing,2
+"The app charged me but didn’t confirm the appointment.",billing,4
+"I want to cancel my subscription before it renews.",billing,2
+"I need help updating my card on file.",billing,2
+"The total at checkout changed after I entered my card.",billing,3
+"I was charged a cancellation fee I didn’t expect.",billing,3
+
+"The app crashes when I open the Support tab.",tech_bug,3
+"I can’t send messages in chat, it keeps failing.",tech_bug,3
+"The tracker graph is blank for the last 7 days.",tech_bug,2
+"My glucose entries aren’t saving.",tech_bug,3
+"I’m stuck on the login screen.",tech_bug,3
+"The appointment page shows no slots even when available.",tech_bug,2
+"The app is showing duplicate notifications.",tech_bug,2
+"Export to PDF fails with an error.",tech_bug,2
+"The app keeps freezing when I scroll.",tech_bug,2
+"It logs me out every time I reopen the app.",tech_bug,3
+
+"Can you reschedule my booking to next Tuesday?",appointment,2
+"I need to cancel my appointment for today.",appointment,2
+"I didn’t receive the confirmation email, can you resend it?",appointment,3
+"The meeting link doesn’t work for my consultation.",appointment,3
+"Can I book an appointment for this weekend?",appointment,1
+"How do I see my upcoming bookings?",appointment,1
+"I want to move my appointment to a later time today.",appointment,2
+"There are no times showing for this week—any availability?",appointment,2
+"Can I book a follow-up appointment next month?",appointment,1
+"I joined the call but no one was there.",appointment,3
+
+"My sugar is very low and I feel confused.",medical,4
+"I feel shaky and sweaty, I think I’m having a low.",medical,4
+"My sugar is extremely high and I feel nauseous.",medical,4
+"I have ketones and I’m vomiting.",medical,5
+"I feel chest pain and shortness of breath.",medical,5
+"I fainted and I’m worried.",medical,5
+"I’m confused about my insulin dose for tonight.",medical,3
+"I keep having night lows and waking up shaking.",medical,4
+"My fasting sugar has been high all week.",medical,3
+"Blurry vision with very high sugar.",medical,4
+
+"Feature request: add more meal plan recipes.",other,1
+"How do I change my glucose units?",other,2
+"Where can I find settings in the app?",other,2
+"Can you explain what the dashboard numbers mean?",other,2
+"Suggestion: add reminders for meds and water.",other,1
+"Can I export my logs as CSV or PDF?",other,2
+"How do I delete a wrong entry I logged?",other,2
+"Do you have full Arabic support?",other,1
+"Thanks, the app is really helpful.",other,1
+"Testing support chat once more.",other,1
+"I was charged but the appointment never got confirmed.",billing,4
+"I cancelled my booking but my card was still charged.",billing,4
+"I need a receipt for insurance purposes.",billing,2
+"My invoice is missing the tax breakdown.",billing,2
+"The app charged me twice for the same booking.",billing,4
+"Can you refund the extra payment from today?",billing,4
+"I’m seeing a duplicate charge on my statement.",billing,3
+"The subscription renewed and I didn’t want it to.",billing,3
+"Payment succeeded but premium is still locked.",billing,3
+"Do you offer discounts for students?",billing,1
+
+"The app crashes when I tap the Support button.",tech_bug,3
+"I can’t open the tracker, it shows a blank page.",tech_bug,3
+"My meal plan screen is empty even though I saved meals.",tech_bug,3
+"The send button in chat is not clickable.",tech_bug,2
+"The app says ‘server error’ when I try to log a reading.",tech_bug,3
+"I’m stuck on the loading spinner forever.",tech_bug,3
+"The app keeps logging me out instantly.",tech_bug,3
+"I can’t change my settings, it doesn’t save.",tech_bug,2
+"The glucose chart is missing for the past week.",tech_bug,2
+"I’m getting repeated error messages when signing in.",tech_bug,3
+
+"Please reschedule my appointment to next Thursday.",appointment,2
+"I need to cancel my appointment and pick another slot.",appointment,2
+"I booked an appointment but got no confirmation.",appointment,3
+"Can you resend the consultation link?",appointment,3
+"Are there any same-day appointment times?",appointment,2
+"Can I book a follow-up appointment for next month?",appointment,1
+"What time zone are the appointment times in?",appointment,1
+"I joined the meeting and nobody was there.",appointment,3
+"I need to change the email linked to my booking.",appointment,2
+"Can I move my appointment to later today?",appointment,2
+
+"My sugar is low and I feel shaky and sweaty.",medical,4
+"I feel like I might faint because my sugar is low.",medical,5
+"My sugar is extremely high and I’m feeling sick.",medical,4
+"I’m vomiting and I think I have ketones.",medical,5
+"I have chest pain and trouble breathing.",medical,5
+"I’m confused about how much insulin to take.",medical,3
+"I keep getting spikes after dinner every night.",medical,3
+"I’m having repeated night lows this week.",medical,4
+"Blurry vision and headache with high sugar.",medical,4
+"I fainted earlier and I’m scared.",medical,5
+
+"Can you add more recipes in the meal plan?",other,1
+"Where do I find the settings menu?",other,2
+"How do I change the language to Arabic?",other,2
+"Can I export my data to share with my doctor?",other,2
+"Feature request: add Apple Health integration.",other,1
+"How do I delete a glucose entry I entered wrong?",other,2
+"Can you explain what post-meal glucose means?",other,2
+"Thanks for the support, it worked.",other,1
+"Just testing the support feature again.",other,1
+"Can you add a quick-add button on the home screen?",other,1
+"My card was charged but the booking failed.",billing,4
+"I want a refund for a booking I cancelled.",billing,4
+"The app says paid but I’m still asked to pay again.",billing,3
+"I was charged the wrong amount for my consultation.",billing,3
+"Can you issue a full receipt with tax breakdown?",billing,2
+"I need to update my billing email address.",billing,2
+"I see a subscription charge I didn’t authorize.",billing,4
+"I was charged after my trial ended without notice.",billing,3
+"My payment went through but I didn’t get access to premium.",billing,3
+"Please refund the duplicate payment on my statement.",billing,4
+
+"The app crashes when I open the Courses page.",tech_bug,3
+"The support chat screen is blank.",tech_bug,3
+"I can’t submit my support message, it keeps failing.",tech_bug,3
+"The tracker won’t load my last entries.",tech_bug,2
+"The app freezes when I try to add a meal.",tech_bug,3
+"My reminders are set but never trigger.",tech_bug,2
+"The appointment list won’t refresh.",tech_bug,2
+"I get an error when exporting my report.",tech_bug,2
+"The app keeps closing when I tap My Tracker.",tech_bug,3
+"I can’t log in, it says invalid token.",tech_bug,3
+
+"Please cancel my booking for tomorrow.",appointment,2
+"Can you reschedule my appointment to next week?",appointment,2
+"I didn’t receive the meeting link for my consultation.",appointment,3
+"I need to change the time of my appointment today.",appointment,2
+"Do you have any openings this weekend?",appointment,1
+"Can I book a follow-up appointment for next week?",appointment,1
+"My appointment disappeared from my schedule.",appointment,2
+"I joined the call but the doctor didn’t show.",appointment,3
+"Can you confirm my appointment is still active?",appointment,1
+"There are no available time slots showing for me.",appointment,2
+
+"My sugar is low and I feel weak and shaky.",medical,4
+"I’m having chest pain and trouble breathing.",medical,5
+"I have ketones and I’m vomiting.",medical,5
+"My sugar is very high and I feel dizzy.",medical,4
+"I’m confused about my insulin dose right now.",medical,3
+"I keep getting night lows and waking up sweaty.",medical,4
+"My fasting glucose has been high all week.",medical,3
+"My vision is blurry and my sugar is high.",medical,4
+"I fainted earlier and I’m scared.",medical,5
+"Severe shortness of breath and chest tightness.",medical,5
+
+"Can you add more vegetarian meal ideas?",other,1
+"Where can I change my notification preferences?",other,2
+"How do I export my data as a PDF?",other,2
+"Can you explain what HbA1c is in simple terms?",other,2
+"Feature request: add a barcode scanner for foods.",other,1
+"How do I edit a wrong glucose entry?",other,2
+"Is there an Arabic/English language toggle?",other,1
+"Thanks, the app is improving a lot.",other,1
+"How do I contact support by email?",other,2
+"Just testing support again.",other,1
+"I got billed but I don’t see any appointment booked.",billing,3
+"Please refund me, I cancelled right away.",billing,4
+"My card shows two identical charges for one booking.",billing,4
+"The receipt doesn’t include tax details.",billing,2
+"I was charged in USD instead of CAD.",billing,3
+"Why was my subscription renewed automatically?",billing,3
+"I paid but premium features still say locked.",billing,3
+"Checkout failed but I see a pending charge.",billing,3
+"Can you send me the invoice again by email?",billing,2
+"Is there a promo code for first-time users?",billing,1
+
+"The app won’t let me open the Support chat.",tech_bug,3
+"I keep getting ‘unexpected error’ when saving meals.",tech_bug,3
+"Login keeps looping back to the code screen.",tech_bug,3
+"My weekly summary card is missing.",tech_bug,2
+"The tracker page loads forever.",tech_bug,2
+"I can’t upload my meal photo, it fails.",tech_bug,2
+"The send button is hidden by the keyboard.",tech_bug,2
+"It crashes when I tap Insights.",tech_bug,3
+"The app is showing wrong dates on the calendar.",tech_bug,2
+"My reminders toggles won’t stay on.",tech_bug,2
+
+"Can you move my booking from today to tomorrow?",appointment,2
+"I need to cancel my appointment ASAP.",appointment,2
+"I can’t find the meeting link, please resend.",appointment,3
+"No time slots appear for this week.",appointment,2
+"Can I book an appointment for next month?",appointment,1
+"Do you have availability on Saturdays?",appointment,1
+"My appointment time changed—please confirm.",appointment,3
+"I joined the call and it kept disconnecting.",appointment,3
+"Can you confirm the doctor’s name for my booking?",appointment,1
+"How do I reschedule without paying again?",appointment,2
+
+"My glucose is very low and I feel dizzy.",medical,4
+"I’m shaking and sweating, might be a hypo.",medical,4
+"My sugar is extremely high and I feel sick.",medical,4
+"I have ketones and I can’t stop vomiting.",medical,5
+"Chest pain and trouble breathing right now.",medical,5
+"I fainted earlier today.",medical,5
+"I’m confused about insulin dosing tonight.",medical,3
+"I keep spiking after meals for days.",medical,3
+"Blurry vision with high sugar.",medical,4
+"I’m having repeated lows at night.",medical,4
+
+"Where do I change my units to mmol/L?",other,2
+"Can you add more recipe options in meal plans?",other,1
+"How do I export my logs to share with my doctor?",other,2
+"Feature request: add dark mode toggle.",other,1
+"Where is the settings page?",other,2
+"Can you explain what fasting glucose means?",other,2
+"Can I delete a meal entry I logged wrong?",other,2
+"Do you support Arabic + English switch?",other,1
+"Thanks, support helped a lot.",other,1
+"Testing support message.",other,1
