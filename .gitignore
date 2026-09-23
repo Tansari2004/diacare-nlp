@@ -1,8 +1,11 @@
 .venv/
+.venv-test/
 outputs/
 __pycache__/
 *.pyc
 .DS_Store
 .ipynb_checkpoints/
-.venv/
 .venv-shap/
+.pytest_cache/
+.coverage
+htmlcov/

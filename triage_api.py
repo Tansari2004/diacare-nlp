@@ -1,3 +1,5 @@
+from contextlib import asynccontextmanager
+import logging
 import re
 from pathlib import Path
 from typing import List, Optional
@@ -7,23 +9,29 @@ import numpy as np
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-app = FastAPI(title="Diacare Support Triage API")
+logger = logging.getLogger(__name__)
 
 class TriageRequest(BaseModel):
     text: str
 
 # simple safety gate (not medical advice)
 EMERGENCY_PATTERNS = [
-    r"\bchest pain\b",
-    r"\bshortness of breath\b",
-    r"\bfaint(ing)?\b",
-    r"\bseizure\b",
-    r"\bunconscious\b",
+    ("chest pain", r"\bchest pain\b"),
+    ("shortness of breath", r"\bshortness of breath\b"),
+    ("faint", r"\bfaint(?:ing)?\b"),
+    ("seizure", r"\bseizure\b"),
+    ("unconscious", r"\bunconscious\b"),
 ]
 
+
+def emergency_matches(text: str) -> List[str]:
+    """Return the normalized high-risk phrases found in a message."""
+    normalized = (text or "").lower()
+    return [label for label, pattern in EMERGENCY_PATTERNS if re.search(pattern, normalized)]
+
+
 def emergency_gate(text: str) -> bool:
-    t = (text or "").lower()
-    return any(re.search(p, t) for p in EMERGENCY_PATTERNS)
+    return bool(emergency_matches(text))
 
 cat_model = None
 pri_model = None
@@ -155,7 +163,6 @@ def _reason_phrases(model, text: str, top_k: int = 8) -> List[str]:
     except Exception:
         return []
 
-@app.on_event("startup")
 def load_models():
     global cat_model, pri_model
     try:
@@ -164,8 +171,18 @@ def load_models():
         cat_model = _load_joblib(cat_path)
         pri_model = _load_joblib(pri_path)
     except Exception:
+        logger.exception("Unable to load trained model artifacts")
         cat_model = None
         pri_model = None
+
+
+@asynccontextmanager
+async def lifespan(_app: FastAPI):
+    load_models()
+    yield
+
+
+app = FastAPI(title="DiaCare Support Triage API", lifespan=lifespan)
 
 @app.get("/health")
 def health():
@@ -178,15 +195,16 @@ def health():
 @app.post("/triage")
 def triage(req: TriageRequest):
     text = (req.text or "").strip()
+    matched_phrases = emergency_matches(text)
 
-    if emergency_gate(text):
+    if matched_phrases:
         return {
             "input": text,
             "priority": 5,
             "category": "medical",
             "confidence": 0.99,
             "gate_triggered": True,
-            "reason_phrases": ["chest pain", "shortness of breath"],
+            "reason_phrases": matched_phrases,
             "reason": "High-risk symptom keywords detected. Escalate immediately."
         }
 
