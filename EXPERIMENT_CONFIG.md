@@ -1,13 +1,15 @@
-# Experiment configuration
+# Experiment configuration — grouped v2
 
-- **Features:** TF-IDF unigrams and bigrams, maximum 20,000 features
-- **Model:** Linear SVM with sigmoid probability calibration
-- **Priority weighting:** Balanced class weights
-- **Cross-validation:** Five-fold stratified CV on the training pool
-- **Holdout:** Stratified 20% test set, untouched during training
-- **Primary metric:** Macro F1
-- **Additional metrics:** Accuracy, per-class precision/recall/F1 and confusion matrix
-- **Random seed:** 42
-- **Safety layer:** Deterministic emergency-keyword override before model inference
+- Dataset: 630 synthetic support messages; 84 reviewed intent families.
+- Shared split: first fold of five-fold StratifiedGroupKFold, joint category/priority strata, shuffle enabled, seed 42. No seed/fold search.
+- Training: 490 rows / 67 families. Holdout: 140 rows / 17 families (22.2%).
+- Group and normalized-text overlap: zero, asserted before fitting.
+- Features: TF-IDF unigrams/bigrams, up to 20,000 features.
+- Models: linear SVM; balanced priority class weights; seed 42.
+- Calibration: sigmoid on three family-disjoint training folds, wrapping complete TF-IDF/SVM pipelines. Vocabulary fitted inside each fold. Confidence reliability is not independently established.
+- Evaluation: individual category/priority accuracy, macro F1 and confusion matrices; both-correct accuracy; complete HTTP API with keyword overrides on the same rows.
+- No five-fold performance CV score is reported for this new experiment. The three folds are for fitting calibration only.
+- Artifacts: annotations, source hashes, split/calibration manifest, row-level predictions, full metrics, saved models.
+- No tuning after observing this holdout. A fresh final test set is needed for later model selection.
 
-The dataset is synthetic and domain-aligned. See [`data/DATASET_INFO.md`](data/DATASET_INFO.md) for its dataset card.
+The previous separate row-level random-split evaluation is archived as legacy, not directly comparable to this changed split/calibration protocol.

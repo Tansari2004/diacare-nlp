@@ -6,7 +6,7 @@ from typing import List, Optional
 
 import joblib
 import numpy as np
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
 logger = logging.getLogger(__name__)
@@ -44,51 +44,13 @@ def _load_joblib(path: Path):
 
 
 def _get_vectorizer_and_estimator(model):
-    """Best-effort extraction of (vectorizer, estimator) from a sklearn Pipeline/Calibrated model."""
-    vec = None
-    est = model
-
-    # sklearn Pipeline
-    if hasattr(model, "named_steps"):
-        # try common names first
-        for k in ("tfidf", "vectorizer", "vect", "tfidf_vectorizer"):
-            if k in model.named_steps:
-                vec = model.named_steps[k]
-                break
-        if vec is None:
-            # fallback: first step with transform
-            for step in model.named_steps.values():
-                if hasattr(step, "transform") and hasattr(step, "fit"):
-                    vec = step
-                    break
-
-        # classifier step
-        for k in ("clf", "classifier", "model"):
-            if k in model.named_steps:
-                est = model.named_steps[k]
-                break
-        else:
-            # fallback: last step
-            try:
-                est = list(model.named_steps.values())[-1]
-            except Exception:
-                est = model
-
-    # Handle CalibratedClassifierCV (sklearn >=0.24)
-    if hasattr(est, "calibrated_classifiers_") and getattr(est, "calibrated_classifiers_", None):
-        try:
-            est = est.calibrated_classifiers_[0].estimator
-        except Exception:
-            pass
-
-    # Some wrappers store the underlying estimator in .estimator
-    elif hasattr(est, "estimator"):
-        try:
-            est = est.estimator
-        except Exception:
-            pass
-
-    return vec, est
+    """Inspect one ensemble member; terms are indicative, not ensemble attribution."""
+    member = model
+    if getattr(member, "calibrated_classifiers_", None):
+        member = member.calibrated_classifiers_[0].estimator
+    if hasattr(member, "named_steps"):
+        return member.named_steps.get("tfidf"), member.named_steps.get("clf", member)
+    return None, member
 
 
 def _feature_names(vec) -> Optional[np.ndarray]:
@@ -188,59 +150,45 @@ app = FastAPI(title="DiaCare Support Triage API", lifespan=lifespan)
 def health():
     return {
         "ok": True,
-        "api_version": "v2-ml",
+        "api_version": "v3-grouped",
         "models_loaded": bool(cat_model and pri_model),
     }
 
+@app.get("/ready")
+def ready():
+    if cat_model is None or pri_model is None:
+        raise HTTPException(status_code=503, detail="Models unavailable")
+    return {"ready": True, "models_loaded": True, "api_version": "v3-grouped"}
+
+
 @app.post("/triage")
 def triage(req: TriageRequest):
+    if cat_model is None or pri_model is None:
+        raise HTTPException(status_code=503, detail="Models unavailable")
     text = (req.text or "").strip()
+    if not text:
+        raise HTTPException(status_code=422, detail="Message text must not be blank")
     matched_phrases = emergency_matches(text)
-
     if matched_phrases:
         return {
-            "input": text,
-            "priority": 5,
-            "category": "medical",
-            "confidence": 0.99,
-            "gate_triggered": True,
-            "reason_phrases": matched_phrases,
-            "reason": "High-risk symptom keywords detected. Escalate immediately."
+            "input": text, "priority": 5, "category": "medical",
+            "category_confidence": None, "priority_confidence": None,
+            "prediction_source": "keyword_rule", "rule_matches": matched_phrases,
+            "gate_triggered": True, "reason_phrases": matched_phrases,
+            "reason": "Keyword override for human review; no model probability was computed.",
         }
-
-    if not (cat_model and pri_model):
-        return {
-            "input": text,
-            "error": "Models not trained/loaded. Run: python train.py",
-            "api_version": "v2-ml",
-            "models_loaded": False,
-            "gate_triggered": False,
-        }
-
     cat_probs = cat_model.predict_proba([text])[0]
     pri_probs = pri_model.predict_proba([text])[0]
-    cat_pred = cat_model.predict([text])[0]
-    pri_pred = pri_model.predict([text])[0]
-
-    cat_phrases = _reason_phrases(cat_model, text, top_k=8)
-    pri_phrases = _reason_phrases(pri_model, text, top_k=8)
-
-    # merge and keep it short
-    merged = []
-    seen = set()
-    for p in (cat_phrases + pri_phrases):
-        if p not in seen:
-            seen.add(p)
-            merged.append(p)
-        if len(merged) >= 10:
-            break
-
+    cat_pred = cat_model.classes_[int(np.argmax(cat_probs))]
+    pri_pred = pri_model.classes_[int(np.argmax(pri_probs))]
+    phrases = list(dict.fromkeys(
+        _reason_phrases(cat_model, text, top_k=8) + _reason_phrases(pri_model, text, top_k=8)
+    ))[:10]
     return {
-        "input": text,
-        "priority": int(pri_pred),
-        "category": str(cat_pred),
-        "confidence": float(max(cat_probs.max(), pri_probs.max())),
-        "gate_triggered": False,
-        "reason_phrases": merged,
-        "reason": "Top weighted TF-IDF terms for the predicted class (linear model explainability)."
+        "input": text, "priority": int(pri_pred), "category": str(cat_pred),
+        "category_confidence": float(cat_probs.max()),
+        "priority_confidence": float(pri_probs.max()),
+        "prediction_source": "models", "rule_matches": [], "gate_triggered": False,
+        "reason_phrases": phrases,
+        "reason": "Indicative TF-IDF terms from one member of each calibrated ensemble.",
     }

@@ -1,185 +1,79 @@
-# DiaCare NLP Triage System
+# DiaCare Support Message Classification
 
 [![CI](https://github.com/Tansari2004/diacare-nlp/actions/workflows/ci.yml/badge.svg)](https://github.com/Tansari2004/diacare-nlp/actions/workflows/ci.yml)
-[![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A machine-learning service that classifies patient-support messages by support category and urgency. It combines calibrated TF-IDF/Linear SVM models with a deterministic emergency-keyword gate and exposes predictions through FastAPI.
+A standalone prototype combining TF-IDF/linear SVM classifiers, a keyword override, and FastAPI. It suggests a support category and priority for human review. It is **not a medical device or a validated clinical triage service**.
 
-> **Portfolio project, not a medical device.** The dataset contains 630 synthetic, domain-aligned messages—no patient records or personal health information. Predictions are decision-support signals and require human review.
+## Corrected evaluation
 
-## Results
+The previous row-level evaluation had seven training-overlap messages in each of two separate holdouts. Those preliminary scores are superseded and archived in [`results/legacy_random_split_metrics.json`](results/legacy_random_split_metrics.json).
 
-All results use a fixed random seed (`42`), a stratified 20% holdout set (126 messages), and five-fold cross-validation on the remaining training pool.
+The new experiment groups duplicates and related message templates into **84 manually reviewed families**. One fixed shared split reserves **140 messages from 17 families**; training uses 490 messages from the other 67 families. No annotated family or normalized text crosses the boundary. The split was fixed before new model scores were inspected, with no seed/fold search. Grouped calibration also fits each complete TF-IDF/SVM pipeline on training families only.
 
-| Model | Holdout accuracy | Holdout macro F1 | Five-fold CV macro F1 |
+| System | Category accuracy | Priority accuracy | Both answers correct |
 | --- | ---: | ---: | ---: |
-| Support category | **92.9%** | **0.927** | **0.934 ± 0.033** |
-| Priority (1–5) | **80.2%** | **0.808** | **0.816 ± 0.022** |
+| Models only | 108/140 · 77.1% | 77/140 · 55.0% | 63/140 · 45.0% |
+| Complete HTTP API, including keyword override | 108/140 · 77.1% | 79/140 · 56.4% | 65/140 · 46.4% |
 
-### Category performance
+Model-only macro F1 is **0.766 for category** and **0.333 for priority**. The priority model correctly labels **0 of 11 priority-5 messages**; the keyword override raises this to **2 of 11** in the API. These results do not support reliable handling of urgent requests. The two overrides repair two joint prediction errors on this split, but that is not evidence that the rule covers unfamiliar urgent language.
 
-| Class | Precision | Recall | F1 | Support |
-| --- | ---: | ---: | ---: | ---: |
-| Appointment | 0.889 | 0.960 | 0.923 | 25 |
-| Billing | 0.923 | 0.960 | 0.941 | 25 |
-| Medical | 0.962 | 1.000 | 0.980 | 25 |
-| Other | 0.923 | 0.923 | 0.923 | 26 |
-| Tech bug | 0.952 | 0.800 | 0.870 | 25 |
+The corrected evaluation changes both the split and calibration protocol. The old and new scores are not a controlled estimate of the effect of duplicates alone. No model tuning was performed on the new holdout.
 
-Category confusion matrix (rows = actual, columns = predicted; class order: appointment, billing, medical, other, tech_bug):
+### Inspect the evidence
 
-```text
-[[24, 0,  0,  1,  0],
- [0,  24, 0,  1,  0],
- [0,  0,  25, 0,  0],
- [0,  0,  1,  24, 1],
- [3,  2,  0,  0,  20]]
-```
+- [Grouping protocol and limitations](data/GROUPING_PROTOCOL.md)
+- [All row-level family annotations](data/message_groups.csv)
+- [Frozen split and calibration-fold manifest](results/split_manifest.csv)
+- [Holdout predictions, labels, and API rule matches](results/holdout_predictions.csv)
+- [Full metrics and confusion matrices](results/metrics.json)
+- [Evaluation summary](results/evaluation_summary.md)
 
-### Priority performance
+Manual family assignment is conservative but not proof that all paraphrases have been identified. The 630 messages are synthetic, balanced across categories, and include no patient records. This one family-held-out experiment does not establish generalization to real support traffic. A second independent grouping review and representative external validation remain necessary.
 
-| Priority | Precision | Recall | F1 | Support |
-| --- | ---: | ---: | ---: | ---: |
-| 1 | 0.941 | 0.800 | 0.865 | 20 |
-| 2 | 0.783 | 0.818 | 0.800 | 44 |
-| 3 | 0.744 | 0.806 | 0.773 | 36 |
-| 4 | 0.875 | 0.737 | 0.800 | 19 |
-| 5 | 0.750 | 0.857 | 0.800 | 7 |
+## Training and API
 
-Priority confusion matrix (rows = actual, columns = predicted; class order: 1, 2, 3, 4, 5):
+Each classifier learns its TF-IDF vocabulary within its training folds, preventing vocabulary leakage into the held-out folds. Sigmoid calibration wraps the full TF-IDF/SVM pipeline, using three family-disjoint folds of the training pool. Priority uses balanced class weights. Calibration does **not** by itself establish reliable confidence estimates; probability reliability has not been independently evaluated.
 
-```text
-[[16, 4,  0,  0, 0],
- [1,  36, 7,  0, 0],
- [0,  6,  29, 1, 0],
- [0,  0,  3,  14, 2],
- [0,  0,  0,  1, 6]]
-```
+`POST /triage` first checks the existing keyword patterns. A match returns `prediction_source: "keyword_rule"`, explicit `rule_matches`, category `medical`, and priority 5. **Both confidence fields are null**, because no model probability was computed. The phrase list is narrow and does not understand negation or all symptom paraphrases.
 
-Machine-readable results are stored in [`results/metrics.json`](results/metrics.json).
+Otherwise, the models return separate `category_confidence` and `priority_confidence` values. A confident category cannot conceal an uncertain priority. These are model estimates, not probabilities of clinical safety. Indicative TF-IDF terms come from one member of each calibrated ensemble and are not a complete ensemble explanation.
 
-## Architecture
-
-```mermaid
-flowchart LR
-    A[Patient support message] --> B{Emergency keyword gate}
-    B -->|High-risk phrase| C[Priority 5 medical escalation]
-    B -->|No match| D[TF-IDF unigrams and bigrams]
-    D --> E[Calibrated Linear SVM category model]
-    D --> F[Calibrated Linear SVM priority model]
-    E --> G[Predicted category and confidence]
-    F --> H[Priority 1-5 and confidence]
-    G --> I[FastAPI JSON response]
-    H --> I
-    I --> J[Human review]
-```
-
-## API example
-
-Start the service and submit a message:
-
-```bash
-curl -X POST http://localhost:8000/triage \
-  -H "Content-Type: application/json" \
-  -d '{"text":"I was charged twice for my subscription."}'
-```
-
-Example response:
+**Response migration:** the former single `confidence` field and fixed 0.99 rule confidence have been removed. Clients should inspect `prediction_source`, `rule_matches`, and the two nullable confidence fields.
 
 ```json
 {
-  "input": "I was charged twice for my subscription.",
-  "priority": 3,
-  "category": "billing",
-  "confidence": 0.977,
-  "gate_triggered": false,
-  "reason_phrases": ["charged", "subscription", "charged twice"],
-  "reason": "Top weighted TF-IDF terms for the predicted class (linear model explainability)."
-}
-```
-
-High-risk phrases bypass the model and trigger a deterministic escalation:
-
-```json
-{
-  "input": "I have chest pain and feel faint.",
-  "priority": 5,
   "category": "medical",
-  "confidence": 0.99,
-  "gate_triggered": true,
-  "reason_phrases": ["chest pain", "faint"],
-  "reason": "High-risk symptom keywords detected. Escalate immediately."
+  "priority": 5,
+  "category_confidence": null,
+  "priority_confidence": null,
+  "prediction_source": "keyword_rule",
+  "rule_matches": ["chest pain", "faint"],
+  "gate_triggered": true
 }
 ```
 
-## Run locally
+- `GET /health`: process liveness, with `models_loaded` reported separately.
+- `GET /ready`: **503** when either model is unavailable; **200** when both are loaded.
+- `POST /triage`: **503** if models are unavailable, including keyword paths; **422** for blank messages.
+- Docker health checks use `/ready`.
 
-Requirements: Python 3.11+
+## Reproduce
+
+Python 3.11+:
 
 ```bash
-git clone https://github.com/Tansari2004/diacare-nlp.git
-cd diacare-nlp
 python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-python -m pip install --upgrade pip
+source .venv/bin/activate
 pip install -r requirements.txt
-```
-
-Train and evaluate both models:
-
-```bash
 python train.py
-```
-
-This recreates the model artifacts in `models/` and writes the evaluation summary to `results/metrics.json`.
-
-Run the API:
-
-```bash
+pytest -q
 uvicorn triage_api:app --reload
 ```
 
-Open `http://127.0.0.1:8000/docs` for the interactive OpenAPI interface.
+Training validates annotation hashes, writes the split manifest before fitting, saves both models, and evaluates every shared holdout message through the actual FastAPI route with TestClient. It publishes model-only and complete-API outcomes, including joint accuracy. Models remain fitted to training data only so saved artifacts reproduce the held-out experiment.
 
-Run the test suite:
+## Next experiment
 
-```bash
-pytest -q
-```
+Keep this holdout fixed as an observed experiment. Before selecting improvements from its errors, collect or reserve a fresh final test set. Review group assignments independently, add representative language and rare priorities, compare simple baselines, and test negation and uncertainty handling. Have qualified reviewers assess routing labels and failure consequences before proposing real-world use.
 
-## Docker
-
-```bash
-docker build -t diacare-nlp .
-docker run --rm -p 8000:8000 diacare-nlp
-```
-
-Verify the deployment:
-
-```bash
-curl http://localhost:8000/health
-```
-
-## Repository structure
-
-```text
-data/                  Synthetic dataset and dataset card
-models/                Trained scikit-learn pipelines
-results/               Reproducible evaluation metrics
-tests/                 API and safety-gate tests
-train.py               Training, evaluation and artifact generation
-triage_api.py          FastAPI inference service
-EXPERIMENT_CONFIG.md   Model and evaluation configuration
-```
-
-## Limitations and safety
-
-- The dataset is synthetic and balanced by design, so these results do not establish real-world clinical performance.
-- The priority model has fewer priority-5 examples than other classes.
-- The keyword gate covers a small set of high-risk phrases and is not a replacement for clinical assessment.
-- The system should be validated on representative data and reviewed by qualified professionals before any real-world use.
-
-## License
-
-Released under the [MIT License](LICENSE).
+Code is licensed under MIT. See [dataset notes](data/DATASET_INFO.md).
