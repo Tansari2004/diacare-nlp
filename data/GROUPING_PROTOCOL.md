@@ -6,7 +6,7 @@ The original experiment used independent row-level random splits for category an
 
 All 630 source rows were read and assigned to **84 broad message families**, recorded in `message_groups.csv` before the new models were fitted. The file records row positions, original text, raw-text SHA-256, and a family name. Duplicate messages and recurring request templates stay together. Examples include rescheduling/cancellation requests, double charges, unavailable premium access, night-time lows, dose questions, and data exports. Several families cross category boundaries, such as appointment display, units, notifications, exports, and missing booking confirmations.
 
-These are manually reviewed support-intent groupings, not expert clinical annotations. Some combined symptoms and related requests are grouped conservatively to avoid splitting closely related scenarios. This is not a guarantee that every semantic similarity or paraphrase has been identified; a second independent grouping review is still desirable. The group file was fixed before new model scores were inspected. It is not adjusted to improve scores.
+These text-reviewed support-intent groupings were prepared with coding-assistant support; they have not had independent human or clinical review and are not expert clinical annotations. Some combined symptoms and related requests are grouped conservatively to avoid splitting closely related scenarios. This is not a guarantee that every semantic similarity or paraphrase has been identified; a second independent grouping review is still desirable. The group file was fixed before new model scores were inspected. It is not adjusted to improve scores.
 
 ## Fixed shared holdout
 

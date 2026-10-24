@@ -15,4 +15,4 @@ Three family-disjoint training folds fit sigmoid calibration of complete TF-IDF/
 
 The previous 92.9% category / 80.2% priority figures used separate row-level holdouts with duplicate overlap and are archived in [legacy metrics](legacy_random_split_metrics.json). The new split and calibration protocol both differ, so the change is not attributable to duplicates alone.
 
-Inspect [all holdout predictions](holdout_predictions.csv), the [split manifest](split_manifest.csv), and [full metrics](metrics.json). One manually grouped synthetic holdout does not establish real-world generalization; additional independent grouping and representative testing remain necessary.
+Inspect [all holdout predictions](holdout_predictions.csv), the [split manifest](split_manifest.csv), and [full metrics](metrics.json). One annotated synthetic holdout does not establish real-world generalization; additional independent grouping and representative testing remain necessary.

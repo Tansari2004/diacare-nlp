@@ -85,7 +85,7 @@ def main():
             "source_sha256": hashlib.sha256(DATA_PATH.read_bytes()).hexdigest(),
             "group_annotations_sha256": hashlib.sha256(GROUPS_PATH.read_bytes()).hexdigest(),
             "family_overlap": 0, "normalized_text_overlap": 0,
-            "limitations": "Manually reviewed broad intent families; not a guarantee every semantic relationship was grouped. Synthetic holdout, not real-world validation.",
+            "limitations": "Assistant-prepared intent families; independent human review pending. Not a guarantee every semantic relationship was grouped. Synthetic holdout, not real-world validation.",
         },
         **{target: classification_metrics(holdout[target], raw[target], models[target].classes_) for target in models},
         "model_joint": model_joint,

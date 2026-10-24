@@ -8,7 +8,7 @@ A standalone prototype combining TF-IDF/linear SVM classifiers, a keyword overri
 
 The previous row-level evaluation had seven training-overlap messages in each of two separate holdouts. Those preliminary scores are superseded and archived in [`results/legacy_random_split_metrics.json`](results/legacy_random_split_metrics.json).
 
-The new experiment groups duplicates and related message templates into **84 manually reviewed families**. One fixed shared split reserves **140 messages from 17 families**; training uses 490 messages from the other 67 families. No annotated family or normalized text crosses the boundary. The split was fixed before new model scores were inspected, with no seed/fold search. Grouped calibration also fits each complete TF-IDF/SVM pipeline on training families only.
+The new experiment groups duplicates and related message templates into **84 reviewed message families**. One fixed shared split reserves **140 messages from 17 families**; training uses 490 messages from the other 67 families. No annotated family or normalized text crosses the boundary. The split was fixed before new model scores were inspected, with no seed/fold search. Grouped calibration also fits each complete TF-IDF/SVM pipeline on training families only.
 
 | System | Category accuracy | Priority accuracy | Both answers correct |
 | --- | ---: | ---: | ---: |
@@ -28,7 +28,7 @@ The corrected evaluation changes both the split and calibration protocol. The ol
 - [Full metrics and confusion matrices](results/metrics.json)
 - [Evaluation summary](results/evaluation_summary.md)
 
-Manual family assignment is conservative but not proof that all paraphrases have been identified. The 630 messages are synthetic, balanced across categories, and include no patient records. This one family-held-out experiment does not establish generalization to real support traffic. A second independent grouping review and representative external validation remain necessary.
+Family annotations were prepared with coding-assistant support and have not had independent human or clinical review. They are conservative but not proof that all paraphrases have been identified. The 630 messages are synthetic, balanced across categories, and include no patient records. This one family-held-out experiment does not establish generalization to real support traffic. A second independent grouping review and representative external validation remain necessary.
 
 ## Training and API
 

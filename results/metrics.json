@@ -16,7 +16,7 @@
     "group_annotations_sha256": "f8dd31c7bc84391768b63cd586a222551854fc6056c80906bdc2d23ade12a92e",
     "family_overlap": 0,
     "normalized_text_overlap": 0,
-    "limitations": "Manually reviewed broad intent families; not a guarantee every semantic relationship was grouped. Synthetic holdout, not real-world validation."
+    "limitations": "Assistant-prepared intent families; independent human review pending. Not a guarantee every semantic relationship was grouped. Synthetic holdout, not real-world validation."
   },
   "category": {
     "correct": 108,
