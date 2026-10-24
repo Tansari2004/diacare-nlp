@@ -1,0 +1,631 @@
+row_index,text_sha256,family,text
+0,e7ce6647717dd61e1aebaa2ce09fa846ddcdeafcad24a21084f5901fa137a54c,double-charge,"Charged twice for my appointment, please refund."
+1,76df6363e82d9461a4cf8e9866288d13dfc79b54c16ff6900b594c78c9d27235,app-crash,App crashes when I open Diet Plans.
+2,aca34221d5099cdd51c975dcef48b153ea3313cd016adac6658ab1e58c1df21f,booking-change,I need to reschedule my consultation to tomorrow.
+3,80362ccb5836ea025644ad8c590c68ead94de44eb055b3b434c3fed0544a3982,high-glucose-unwell,My blood sugar is extremely high and I feel unwell.
+4,1e2da92220b15cccd00f686a9cf087ebe053b3ac8a91facfd088c192a3edf04a,positive-feedback,"Thanks, everything works now."
+5,e7ce6647717dd61e1aebaa2ce09fa846ddcdeafcad24a21084f5901fa137a54c,double-charge,"Charged twice for my appointment, please refund."
+6,d9e8b3edd1054cedb39bb4d7f5005e221ff748ed3f2071fc2f0e41b849a5faad,double-charge,I was billed two times for the same booking.
+7,f30ec7aab1c374f0c10e88a6871721d098028f40a194628d4228a588fd989e7b,booking-confirmation-missing,My card was charged but the booking didn’t confirm.
+8,308ce369779c44c32c8963f73ab2939e0726b9fd80ad9c9dcdee1eac28a6021f,booking-confirmation-missing,I paid but didn’t receive a confirmation email.
+9,47d30787b21cfdd4dcab95dac24b77986e8bd18992743ef0a87684d997b76acf,payment-state-error,Payment failed but my bank shows it went through.
+10,edc66a20726fcb28c99e8ffbe4dc77d814cbb12a519383b7ab19ae27f738410c,receipt-access,Can I get a receipt for my consultation payment?
+11,8a3797c9ca8e794fd1a8246a9abc9ec63af3987a3bc34e6489d73e2c7b724966,refund-accidental,I need a refund—payment went through by mistake.
+12,6eb73c4eb0a7548dabc3afb74096ff9d09cbc490a27a3df9d9dc25398f3c8da7,cancel-refund,Subscription charged me after I cancelled.
+13,e23a969d919a7019cddecedbb80a17ee7bdffa68e03f448c236d588c0bba3b06,price-discrepancy,Price shown is different from what I was charged.
+14,f84f14abe8cec54ec607a2985091dae0060a9a5b1389a06b39556854f5f38a85,payment-state-error,Apple Pay charged me but the app says unpaid.
+15,76df6363e82d9461a4cf8e9866288d13dfc79b54c16ff6900b594c78c9d27235,app-crash,App crashes when I open Diet Plans.
+16,caae2d36e705c420505246cff7a9018309ac4203eb5765eedfa88e784e4193d5,page-loading,The app freezes on the home screen after I log in.
+17,f478c13f4148d499f68ef6c8ea085c04883bf83af5d5a52906166bd98686bb31,log-save-error,"I can’t upload my glucose reading, it keeps failing."
+18,8a1d47efb1d45c747043f1fd9b1bc913bc3002efc592d4886c11d34bb81b5279,page-loading,My tracker page won’t load—just a blank screen.
+19,5b74cd0922c4975d9744336dd446067a2c045c60db723067ffe2bbfa787267ab,notification-preferences,Notifications aren’t working even though they’re enabled.
+20,92f3cbde19fec770425f7eed64cbef4c710a02666e653f66a3e083068eb5baa0,booking-action-error,The button for booking doesn’t do anything.
+21,0d52411f1a6e9f5da8949f61fad7b0a0e8930eaf47d3dde7e231dca85763612a,log-save-error,I get an error when I try to save a meal.
+22,575e8eefac6503d3637100133b3f1369f1e9732168b405ab0bb418563ed3cb26,login-session,The app logs me out randomly.
+23,6b898c8e0b9e43089f716d6cb8da2e71c2e00362accabee0c06bbd71da4fd7b4,login-session,Login code never arrives to my email.
+24,8fbe8b408fdfca119db8a4c81ea56b30686473ca47d7f7fea99b23dadd835387,app-scroll-freeze,The app is very slow since the last update.
+25,aca34221d5099cdd51c975dcef48b153ea3313cd016adac6658ab1e58c1df21f,booking-change,I need to reschedule my consultation to tomorrow.
+26,85e28679166c2a3c813f9bc31e38a3fdb6858cb311289e47d8b8194bcc080ccc,booking-change,Can you cancel my booking for today?
+27,5f05d5b88d753d4b0f3c463214ad14ece4764c8e721258a8ca1100095227992f,booking-change,I booked the wrong time slot—can you change it?
+28,836556a3a13c471805742952a55c54d14f04e656ce545889af5e80858c48d3ca,booking-policy,How do I book an appointment with Dr. Wisam?
+29,a5c0ad32afb66cacc7c06f0838debb189c91e3c5555091bb20975a119d93490b,booking-availability,I can’t find any available times this week.
+30,edf05970be93cccb1752956dd11f5b3333c2b6de161816b2d1762accff232700,booking-availability,Do you have appointments on weekends?
+31,793d74c4d7a76c9d1ed66dd1873cb180c379ad4b4135737ee8543274d674ef69,booking-change,I missed my appointment—can I rebook?
+32,76b62303f5b8ce8aa0d1c98aba8fc3d092e6b8f159e1ba0da694df8da883265f,booking-confirmation,Please confirm my appointment time.
+33,ca0eabc747168ee63ba2360e1a5c9c6e6fa7cc28f06c112fc8fe994a6bf78288,booking-change,I want to change the appointment to next week.
+34,8d37328bde9c796ef82cd29bf37b8731d561a9ccb4b635291c7ac3b246d25ce6,meeting-access,I didn’t get the meeting link for my consultation.
+35,80362ccb5836ea025644ad8c590c68ead94de44eb055b3b434c3fed0544a3982,high-glucose-unwell,My blood sugar is extremely high and I feel unwell.
+36,be2eaa621a5ee375084dc5be087c6f7869a24a7c34048f556b2fbbd6b920eb7c,low-glucose-symptoms,I’m feeling dizzy and my sugar feels low.
+37,5bdf0c04f314724400251e3216902a21d75dfab13fb9f3889e83e020e181fa02,low-glucose-symptoms,"I had a severe low last night, what should I do?"
+38,7ee856107c2a427507c38b02021f9857c3deac31f12683b6a0a01459198cef1d,persistent-meal-highs,My readings have been high for 3 days straight.
+39,08c88556502fc02d47a5472ac946a9cf3e9efe80e69cbca89655844d4512d8e7,low-glucose-symptoms,I feel shaky and sweaty after taking insulin.
+40,320032dd988b722ac98738e38bc8dbb7388fda168487cfe4ac9bf4856bce7091,vomiting-high-glucose,I have nausea and I can’t keep food down.
+41,6b7db7fb8e9c44f970e3ba605b22e93b32694ec509e859dfe425418115181a5f,insulin-dose,I’m confused about my insulin dose today.
+42,d6ff159b8075f59c4590a365074e65d280da06d60f2bc3b41fee8c627c7f10d9,exercise-lows,My sugar drops after exercise—how can I prevent it?
+43,3de4aa1194386a369e5d454780a01d4483d5bbefebf7c3c07d8111c4704a774c,night-lows,I’m worried about repeated night-time lows.
+44,d349c7c6af2dfb27fcc1fcf4a75ddddb2378015ec9537acbca6f1d979ca3fd1c,chest-breathing-vision-headache,I have chest pain and shortness of breath.
+45,eb1a985207d338c8fb2d3116e591bf37446feb6377151cf5e22618530f45433b,positive-feedback,"Thanks, the app is really helpful."
+46,060ab2b9d9c2dcd1a12c6928ac0deb6f79be9b2d15d17362ccaad9729c11dd86,positive-feedback,Love the design—great job.
+47,e1970b64b70980d09bd106a9ee56c7bc3fd9da6a52e27b495f74dc73f857c8d2,dark-mode,Can you add dark mode?
+48,dff75a9cd39b41e45b32f185c92abf205e6605a76204ff4731b68409d347865c,meal-content-request,Feature request: add more meal options.
+49,cc5e1e0fddc0755c7a5f39496279da1dc8bc6451135de61b575f432803576f13,home-widget-request,I have a suggestion for the home screen layout.
+50,3797a16dd264e2690135c77fa046907e38e399135cd1f69074e01ac6cb2dd45c,feature-help,How does the meal plan feature work?
+51,7d1dfe792948869d5b044dcdaa907f56e290f2a278aa300ed704a30ff7b47ca7,feature-help,Where can I see my weekly summary?
+52,f18c2feeac4f1a7a8ec2e3bc3828c2baa6dec546798ac6ab1835a59312d46d18,language-preference,Do you support Arabic language in the app?
+53,8f9e392e20536263a0c9a0efc4eb011ad0e2c568a0cecd6106cb1f26ff1e2568,support-test,Just testing the support chat.
+54,8a23b2d336ec172c6898a95196e6c312b50b99183378f84bd186230563a89454,feature-help,Can you explain what the numbers mean in general?
+55,b903c5b976ac8b412b61fb91e4b68a20dd4facd194cee7b7785ca4550c1fc551,booking-confirmation-missing,I was charged but the appointment page still says pending.
+56,cda652396d787d2434a74c8a4608d06687c89e7e6632eaa556ed44c70dae0644,cancel-refund,Refund request: I cancelled but got billed anyway.
+57,0f90e48af3c85c7b3a44a6582712acf9f7929098c67343084ec209b1d258e6af,double-charge,Payment went through twice on my card.
+58,8973b96e91ee50ca52bef04c70537cfbe5f12e1a56c8c8fb04f3fc4fffbf5ac9,invoice-details,"My invoice is wrong, it shows the wrong amount."
+59,76e9e3ed08c56566f16ea719df1a5c025af4cab4b0f92bd45c368e619467c6aa,payment-policy,Do you accept e-transfer or only cards?
+60,7bdc6889eed5a8d015ba8d3704e41c61703d2f43769686670a94e7629a16edb5,receipt-access,I can’t download my receipt for the consultation.
+61,44ea03986d244402bcbb0d543c40ca7a4df29ef0965d672614b345860049a24d,promo-code,I used promo code but it didn’t apply.
+62,7bad54a97183aa9f1fa1c69ba7a032a6d73c3bd86caf4d87991833b02b382bb2,price-discrepancy,Why did the price change at checkout?
+63,e2b12e71769206569b26af672a8e3254cf4e826593ec742c849e670338aa82bf,currency-charge,I got charged in a different currency than expected.
+64,993ac8e311988f61921dc27015aef39faf1bf1b4a9db1be6949acd372e3eef34,subscription-cancel,Please cancel my subscription and stop future charges.
+65,5eb4f30b457b1608660613051dc71dcae66bddeecc92f439fcb0a210b6504931,page-loading,App stuck on loading screen after update.
+66,490dbe8912253178baffadb3b6b3cf3597c3bd08ec059720be819a16100406cd,booking-action-error,It says ‘something went wrong’ when I try to book.
+67,c1d6b46645cefa7ec2104d6d65ba5497a8980890af2da963d14b829ea885e3fb,photo-upload,My profile photo upload fails every time.
+68,30462f172e32d017a74f7761896571762b3a211276595665af64dba858880296,app-crash,The app keeps crashing when I tap Tracker.
+69,f5f91fc39ca753f8b67082abad797d8979a0b778afb9b08efce01858106e4939,login-session,"I can’t sign in, it keeps saying invalid code."
+70,021d0567a58456cda8c20f08d26d29387e4b0954b73a58c455cb8bf33beba91a,page-loading,The meal plan page is blank for me.
+71,ce5de922117431aea7348274d7de2af14727258cf0cbd7529cf0c8a4ece2dce7,notification-preferences,Push notifications come hours late.
+72,ea97c98c1a995fc33458cc1d8af475c3d2e509c21f70014ede187d83e9278622,app-scroll-freeze,"The calendar won’t scroll, it freezes."
+73,f4beae3dc33a8d49f3fcf66a47bd6364966d094ac519891d6d1e527770e2d49d,log-save-error,Error 500 when saving my glucose reading.
+74,19fa257de11346a753590101c4a2a9ac947bc898e4cd825edab28bc6ca8a4229,login-session,"I can’t reset my password, link doesn’t work."
+75,6d0af4fed380f0aa076756728e01db86986da2d75b87125dc79c86551dac1510,booking-change,Can I move my appointment from 3pm to 5pm today?
+76,f7dd2270a5a20dda366a724396df8ef9f3f03d3b297eb3066293950e7a496b79,urgent-booking,I need to book an urgent consultation this week.
+77,5ccf048301b61acf6ffe0a6608042fc59850f7ed053fa34c875cabd040ca9274,booking-policy,Is there a way to choose a different doctor?
+78,29e1fc33443470b6ff962100ffa729243b95ce5d277591d76bfdabc9c49d2d02,booking-change,I accidentally booked two slots—please cancel one.
+79,5d9131ed52bd3fb413486deaefa779fe59825cd13473dce24fbdde6b0f367963,meeting-access,"I can’t join the call, can you resend the link?"
+80,52cbd69e09ef087af0cb6f38d47b56fd1a5b2dd6407bb8ff76585cb3867e5403,booking-duration,What is the appointment duration?
+81,1f492ae9c70b1b2fdf539ca2f512ea3b2f0e5bce9d21a4c03d3886d642605e0c,booking-family,Can I book for my parent using my account?
+82,ba700619abfcf120f960a6b2baae77cabe44772988ba7c96c86b0d03de49a7f3,booking-availability,Do you offer same-day appointments?
+83,0e7ac2fe37dd5d085d6d5e4c84f8e0377c13e4b42068879a3f45a02aba47ccd3,booking-timezone,I want to confirm the timezone for my booking.
+84,6500deae3de1bc473c1cc40412117787d1cbd3fa639d71cf87d58971bac6e123,account-email,I need to change the email on my appointment.
+85,1a81dfd3420aaccc166f9db610759f6511443fd922ea9282a8974f3f2ce34247,low-glucose-symptoms,My sugar is low right now and I feel shaky.
+86,2904c1e7da8e19b0b9837ddc6b4e1816bb0f91958bf9f76e2a4bdbae13621790,low-glucose-symptoms,I had two lows this week after dinner.
+87,7bbc47e81fc8256ed1ac2fb095cb168a92dde08aae51de2be6bff440cf27eac4,persistent-meal-highs,My fasting numbers are higher than usual lately.
+88,44f0a7c053a74c324908219bba93ba3682a356095265e3a3ea3e5ef935680f25,persistent-meal-highs,I keep getting spikes after rice—what should I adjust?
+89,796c058e19f31561d2ab42df87a2be850d762397ef60f843c6485ee35e9bfb11,low-glucose-symptoms,I took insulin and now I feel dizzy and sweaty.
+90,ed61355f71aa576d62ae7118c11114299d96e0d54d1279078b13121842d16a47,vomiting-high-glucose,I’m vomiting and my sugar is high.
+91,31ecb10d1c8351ec7bf42dfc9bd7b94b7b4a99b950fdc002aaa026ebcb36c78c,ketones,I think I have ketones and I feel nauseous.
+92,186074ea2ba14686435eb24f16b8176359b13eeb66075912cf69bac0015372ee,chest-breathing-vision-headache,My vision is blurry and my sugar is very high.
+93,4788a17a9fbe936c31fc4b5eda6721637a6e1911abc12c0686dd5a775968261a,low-glucose-symptoms,I feel confused and my sugar is low.
+94,36614840490f49bb87655e890d5eae20939ce262a32390307b80eba490a1cf6f,chest-breathing-vision-headache,Severe headache and shortness of breath.
+95,1932aa6a4fde064c215999e7033bd5c921f034fdff70eaa1e1fd1fdbd0844f0a,positive-feedback,"The app is amazing, thank you."
+96,439e89b1b6dc4ef263bb58bf878d0647c1be093db1e25c187146487ce472e622,home-widget-request,Can you add a widget for quick logging?
+97,1d20c3aa6e11b6a7a6e2a450ced2811727b6f609e5c23c30d2338ac8733bd61e,feature-help,I’m new—where do I start in the app?
+98,32217353bf0732491f0dd434276f792569b8b62e2db19b242eb2185ab37dd140,glucose-units,How do I change my units to mmol/L?
+99,e86fa866b39c962c81f874b896cdb648c8c2e7c96c2bfe880273d5a359cbe8a2,data-export,Can I export my data to PDF?
+100,90d6b9111765e6fab38efa0fba79f85db0f3a2c22051a511862c2d6abca3939d,edit-log-entry,Is there a way to delete an entry I logged by mistake?
+101,5b3bf62d10dc1e05c2d6233bdcef726af898e2318cacb42845ab1b2a2ecaf759,feature-help,Do you have a tutorial video for the tracker?
+102,789fd1edd77f5e561ccd061608716bf9d87ca490181cd9f808daf1b4a6ccc272,notification-preferences,Suggestion: add reminders for water and meds.
+103,b9aec5af956dd1f596a51bab1ba2684ab07d7d2ad23fa8465fcf4e7eeafbbdd0,streak-feature,Can you add an option to hide my streak?
+104,04504c00ff6c66cb777b126447e4299f3ed80f91b326f18fea8e522b9099a8d3,support-test,"Just saying hi, testing support."
+105,63d0e70c13354e609713d8c1d851ee0ce8d96185e0ce57659e73865329dee641,booking-confirmation-missing,I got charged but I never received a booking confirmation.
+106,e46b09d2f4ab3f484246ef523fc022bd9fcf57dbe509d9e06eb4322d8b38b6ad,refund-status,"The refund is taking too long, can you update me?"
+107,9a8459261cf8aaf4fd0e21b352b5f57bd65c1a0a4f6e3b27af8ee9478d477f08,payment-state-error,My payment was declined but the app still shows paid.
+108,132c2e9d9db1d5065bf26e4e498563c024e85f37add5ebefe270fed3f5131497,price-discrepancy,I was charged a fee I don’t recognize.
+109,4333c3c0750ea138a5dacc1368924848ce745e8b35f8f6c79c5a08b68bc3bb49,receipt-access,Can you resend the receipt to my email?
+110,09ddfd870e7942af8c01c34fa9a388c67c10dcff935d8606c4ef36050742f06c,double-charge,I accidentally paid twice—please reverse one payment.
+111,7ef9c773891dd1c879f77c53d40e0966902ba9bdd61d72f8fb9bf0371281a1df,cancel-refund,My bank shows pending charge but I cancelled.
+112,325cdf644cf44e4097e616bab70a31710902bacdcd8993496b4e3f7723d49cc4,promo-code,The promo discount didn’t apply to my purchase.
+113,0627637e9dd1d71377864ab28fd39e754d2155c74cc2712f0b0d78d70a05faa7,subscription-renewal,Why was I billed after my free trial?
+114,9bc1eb05b4509948fcc72f2dc0694335b32f37c61d1460107dc21bcdae714786,payment-method,I want to update my payment method.
+115,345e24dbe471b1f8a3ee4026e0dfc59ce0d43cc667faea3e75d57b9372137138,checkout-failure,"I can’t complete checkout, it loops back to payment."
+116,5eb4d633f93ce407a7e90ddf2849ec53080a3240fe9e8208fff24652b7c51444,checkout-failure,Payment link opens but then nothing happens.
+117,7c8a9ac3ee548e59abfed89914519b5fa2e43df02218f7a4d2535185c1dbee8b,cancel-refund,I was charged for a session I didn’t attend.
+118,b40f009631db01da3f4697fdde544d045a255034d27ea57289f00b423346f66e,payment-policy,Can I pay later or must I pay upfront?
+119,2b679f6e635fcb7848a6f3d02be7618bd30f641543f2c4ad3241a86651d0f5ca,refund-status,The refund amount is less than what I paid.
+120,c7e76ba82eb3592008f53a9112d040db10cb31b5bb895c2220be0c51efc9c512,page-loading,The app keeps spinning when I try to load my history.
+121,9aa5e789671582cb5b22951393e9372a8e90968e082fb9956ed4f9d41528d78d,page-loading,I see a blank white screen after logging in.
+122,70e71c6f98d60bbac5274a27ffed0d9d6c3f2b0210f66ef0f2afc72ac2329e1b,page-loading,My charts are missing for this week.
+123,db8ce17992b25bd4640540a7d13760b99c06adc986ee221420ee2b30474a8386,app-crash,It crashes when I tap the Messages button.
+124,8dfb5bc5db19f23302f1e68b87346ca63b0d7f9c3ec3ccfd26edad9f62a01567,page-loading,My saved meals disappeared.
+125,91cdccb24b2832d914d5b6d86e24bdeca9f7e95e2f75865f6d0aa585a8658d15,log-save-error,"I can’t add a new glucose entry, save button does nothing."
+126,4db6fc18b14c90d57ff142dc57208a40f737e2e166ca9a921123d97f1c6a51c0,chat-controls,The keyboard covers the send button in chat.
+127,a790b6fbe8b2505316ac5d411ddbad9918cd665621a99c37d1f9432b9c0fb280,network-service-error,The app says offline even though my internet works.
+128,fbabe248d97f36ea64667e99e354b716f046cc235d738f54920ad7e6d4cc12df,login-session,I’m stuck in an infinite login loop.
+129,160f877670244aa1acdcce71b2549d0db8836735ef5756d189bf8d5649a5b124,calendar-dates,The calendar shows wrong dates.
+130,53ca8bc10e2627356b8e8b893b90990303df0482f7f0862d8d21ad8bfd6698d9,profile-settings-save,"I can’t change my profile settings, it won’t save."
+131,8b17d404c9309057095b61002d72105b3644db3f56f390062c5e3ba95bcce6a1,notification-preferences,I’m getting duplicate notifications.
+132,5dd0c088ffdb20b9b20fa757b01c89cafa0c646dd5656b241dd6e78885edf43a,login-session,It logs me out every few minutes.
+133,213b1064d270d437f453de728647e00de0579b8f94045ed7059ea2b99b3c7880,app-crash,The app crashes on startup.
+134,82a7eca3af60a959474e0a3acd6194bb71f7dba2f49a8401c93ba6e6816dbad8,login-session,Error code 401 when I try to sign in.
+135,f10aa2a806fb35a07309b6c95cdb7c9ec11100350f2454b9a112433d6c74105f,booking-change,Can you move my booking to next Monday?
+136,2343cf041df77d9b54d5adf756cdcf81bf386e5f622cfaca2130563714d9ac4b,booking-change,I need to cancel and get a new time slot.
+137,48c30b026de2e5a8a3e5a43f5e698bc48520f2a2131197cb41d11c8eefc6adbb,appointment-display,How do I see my upcoming appointments?
+138,0eb454b32deb265b17294cbf99050cd7794d4f0c263467ad88d09cff4246fa1c,appointment-display,I booked but I can’t find it in my schedule.
+139,870c3811a41c1bdc92c31eb355862202ac585260b73ce47702fbde62b626686e,booking-availability,The time options are all full—any cancellations?
+140,46feb3d335bd66a6ff8bee5e3d1cc96a0b4351407e8a07860f8f1ae3aa0bd1de,booking-policy,Can I book two appointments in one week?
+141,b64ee560c77115b262253f3bbbee286ff58a8414263cf57cb2ced1f0fdc2e118,urgent-booking,"I need an appointment urgently, my numbers are high."
+142,2f2c0ef7e8725831c053a593b466e556a876e548863eee6ffe807d18ae28acfd,booking-format-location,Please change the appointment from in-person to online.
+143,6705d25c96827d1bd9b2a7e4de7f570b47dba67344296a854978b371589d7d69,booking-timezone,I missed the call because of timezone confusion.
+144,f6d77abc9cd9e457c4284b7f4576976f6ad84582e990d1836556cb1b45422426,booking-confirmation,Can you confirm the doctor will attend on time?
+145,fd313884ca99e51dce937842a4cc17155040efaf707a18f6c22ec703319d7a7b,meeting-no-attendee,I joined the meeting but no one was there.
+146,79aa176f03ee25f10695313b7f508f6b7d5a5d504712b3a843a74f9c6d7fbed2,notification-preferences,Can I get a reminder before the appointment?
+147,68afdfd878a4bdab529d62a6dd8a484f7eec9ff20950d4e6f3db288972232296,booking-phone,I need to change the phone number for my booking.
+148,8b25a8aa1396667efdb46b96a2ef65167aec8583f87ddb045cf3f6952908e57e,booking-change,How do I reschedule without paying again?
+149,77a6c3f1d2f76536fb7c2219ded555aaeb87a69c21fa5aa95c3904c123a36f45,booking-availability,Can I book an appointment for today?
+150,a3646c82d1583a1e30c85b2cd849556db5cc6db9b3ac207d72bf8d9253f7b446,low-glucose-symptoms,My sugar is very low and I feel weak.
+151,4f48b690c4d280fa5d218ad41da5106636448ca2e380be7e3297b431b97a0aa1,night-lows,"I keep getting lows at night, it’s scary."
+152,efbe1082900aa7f253291efc23191a83c34ca6ce8a2ec07dcee5f98fce1496d6,persistent-meal-highs,My sugar is high after every meal lately.
+153,c4324d9e73abf7be0d3d02fd087d9d43bc6d317829a52043f41c51ef1aab502b,insulin-dose,I’m not sure if I should adjust my insulin dose.
+154,cf5c879b29c9b767847c1a4c4fb1479ffa6e830a8a02d0f267efa14847924bd6,ketones,I have ketones and I’m vomiting.
+155,b10c4a2c8486eb686117f718c59834bea0b88d0ebd89635bae52c9b105c530ee,low-glucose-symptoms,"I feel shaky, sweaty, and confused."
+156,83211b0304f43d362336c14db73fc34f4a4af7e19512ca201d7d24e3b384b88d,persistent-meal-highs,My fasting sugar is consistently high this week.
+157,00018a2c6854aca67be554c52e798f52ea5eca58379213d73f9de32eaff59360,exercise-lows,I had a low after exercise again.
+158,cb6ca4500bfb4d2446f2ffbf7dd2d34d04cda661722dbe090b32009146ea2070,high-glucose-unwell,I feel dizzy and nauseous with high sugar.
+159,9492acd63f52fbb65fbbe55e09d4bc43df17cea27859ce1afd2cfc953b1a5587,erratic-glucose,My readings are erratic and I don’t know why.
+160,09af8985b4fd2c23366445442d037d83704849baea5fae8d8c5fe69418d9ee13,chest-breathing-vision-headache,I’m having blurred vision and a bad headache.
+161,b5f93333ad32b20427823a1ab60f75aa511d900fde34c34bc3a1d1a5686941c1,chest-breathing-vision-headache,I can’t breathe well and my chest hurts.
+162,7b2d337a07c6cd60638573dd39c39adb6c76543dc8088179916fbd00b50deb78,low-glucose-symptoms,I’m worried my sugar is dropping too fast.
+163,7b7ea36a94a55cfddac36e2609bd864b58a5daec5b1ff6b044930a30b805aa8e,insulin-device,My insulin pen might not be working.
+164,fc5d56ba019651faab30757cd5eb0eb382dae6959b3df63fb0f5393574d7f298,high-glucose-unwell,I feel extremely thirsty and my sugar is very high.
+165,10b7e6ff325f969864c5b05c51f622cdc7e6918a61df5049286cbedd034304c8,meal-content-request,Can you add a search feature for meals?
+166,46a217636971e1f185089e6b6814199f5b2d300c90c301959d6abe7fcb34b5d0,notification-preferences,Where do I change my notification settings?
+167,41ce887a48e1e0f71da674890569162d86e2f67682a09324433e650055671fa9,contact-help,How do I contact the doctor directly?
+168,862f71db7b2b006c11ee67d96e4babe5df7a279675e3ebd4fb3376728862bd2d,data-privacy,Is my data private and secure?
+169,b9e87842097123a2befce0defdb74985b83919d0a2b20e1581b44ea2618d56ff,language-preference,Can you add Arabic support for the whole app?
+170,3509a4f50c26922605a72b658d9ee2c6bd7d1b4adcd387a981e643d4d2e30d62,feature-help,"I don’t understand the dashboard, can you guide me?"
+171,39c9658206ff45cf1d86a41957dafa63022309b2a3b041d5c3b02c47d05693b7,account-delete,How do I delete my account?
+172,e937caa4c01713d24ec3c0c43ee9fc66f747a6eab4a3d1ccdc03bcd4411fbe4b,dark-mode,Suggestion: add a dark mode toggle in settings.
+173,f293e9211c26b72f9a5b087bb5e245e89f7df0606f1a2c3c5233ea2d2f218cc4,data-export,Can I download my logs as CSV?
+174,7a7fcc2705252fe62efef987ea11a4cceeeefa57aacfb7e2cdfb087bb3bdf615,feature-help,Can you explain what HbA1c means?
+175,24f20a985d1fb8037e012fce70c90f8e3cb8a853d404ab7d10326154de28d7f5,positive-feedback,Thanks for the quick support.
+176,803bed70ec302b887058f8fe694a09b17315ad0eb2d08b5276080b886588f981,positive-feedback,This app is super helpful.
+177,d6da92b092e79f62e0c15640360b65ef45afcc124797278d6f609d0d5cd471ec,notification-preferences,Can you add more reminders options?
+178,bbe258467c1bb4c5c701d4abf98106d5d681af2a7fea36160a1e3002051627d8,contact-help,Where can I report a bug?
+179,69647ecf83b9fbf1ec43a9ec465a2efbc4255b28ba3acf61e8bfb5379ab3452f,support-test,Just checking if support is online.
+180,74192b2df6378c3e08da668505d751bb64231ab296fd17032901d9d27832e66c,booking-confirmation-missing,I was charged but the appointment didn’t show up in my account.
+181,36e0b189f43a65e13005a138071890dd242ea97af72ed68af06eab9a1d93f3aa,refund-status,My refund status says processed but I didn’t receive it.
+182,6199ee46d5187957d778f255171dfac597a3452d4daf9d538452cbf1686f095b,invoice-details,I got a receipt but it has the wrong date.
+183,a49a91ead405bdd54a23536be9629d395ad2c9b9d9a6ec1af92dc5d8a6dc2765,invoice-details,Can you change the billing email on my receipt?
+184,0c5ac54bb782f45b187a0ded3ee07a1767b864577a593a31bccb4c99851d1389,double-charge,I was charged again even though I already paid.
+185,343a0839a9f238daa739cf4ea0af0fa36badd2e8e38f960834f832ac21c90916,payment-state-error,My payment is stuck on pending for hours.
+186,4475a1ba49e5724f6b1a16a5b26adcc27ab1528441e40184a9be5a9510e0b56d,price-discrepancy,The checkout page shows an extra fee at the end.
+187,bc9e2bc1e02e8108c08519d4fe4f5e3ee1edaa128fd8262a3b10802093b3de37,premium-access,I paid for premium but the app still shows free.
+188,1040033eac0686664fdfb4fa5edc9654470a13851ac3d489012f8c2daae92f76,promo-code,Is there a student discount available?
+189,2c438e6279696debf61b05d339d426210251f700a7300e8b4b358c74d4712da0,double-charge,Can you refund a duplicate charge from today?
+190,e9a38c34da975f84e1d9ee5a78baaee4813ee784c46e128810c52ab4794adf03,payment-state-error,I was charged but the app crashed during payment.
+191,e15a1046cfb68e9b574258dc26eab32c2912d1cd40eba2a33e91dd1f352bf9b2,price-discrepancy,My card was charged for the wrong plan.
+192,48f657e9e857d9b9a1ff2a653e561bebb577128ed3b488fa997d55792b16238c,cancel-refund,"I need a full refund, I cancelled immediately."
+193,76a535aada887c8ea7f0c06ef48e9eac34dad744c0ac51b24092aea040e7b8ab,booking-confirmation-missing,Payment succeeded but the session wasn’t created.
+194,cdde68bb45ce2b78cb90505374d150e867b9f5f90da18d299cc070ef6788c027,invoice-details,Why is the tax amount so high on my invoice?
+195,088cd32fcc684c76de7d4a2bf0e898fdda4b57175885e3c13f2a5999665f669c,page-loading,The app won’t open past the splash screen.
+196,49ac0cadb9b321ed52ca0fb3c148604e1a86865c7a7ca7dd4707ba4a4c0ae95e,page-loading,I get a black screen when I open the tracker.
+197,0e37cbc7399c1f207855fa4f8aa63568d4ec86c3e75b975a668749d56e34bf23,image-loading,The meal images are not loading for me.
+198,86490109cfd1a7e6f6e6a9cc46215e76e39752a372f7a42c41d9102e489b3fac,app-crash,It crashes when I try to open Courses.
+199,6649aad521ab8000b134bdd525dbc488dcb0cfbd00c665bf473192a4bf1797ad,notification-preferences,My reminders are not firing at all.
+200,fc5104dafda8d0acf21deb9ce22aaa0842f7dfb11fe205df9af692c62971e2a7,app-scroll-freeze,I can’t scroll in the meal plan list.
+201,48230879f16d684c67047d9d149f0bdee3bb1dbab09eb373ae99720e5c8a170f,back-navigation,The back button doesn’t work on some pages.
+202,77872581e5b91fb6d5b6fa75fac0e71dd07f344c5113dea0d66fc29d1da4c21a,chat-send-error,"The chat messages don’t send, it just says retry."
+203,1d1202ad77c126f100977991471847131010f40f2ef0894eeb22100b24bd320f,network-service-error,I see ‘network error’ but my wifi is fine.
+204,de86deb5c8057a90a583f9434da3cf7ba8d3664a6d1045bb1aa29971e17a657d,log-save-error,The app duplicates my glucose entries.
+205,9b253237efd76e414d8ab79d5c9b8e3f5a7b3fade572f73891994aaf56579685,appointment-display,My saved appointments disappeared from the calendar.
+206,70df7a45b16cd38933cc4d0b0c5e25f6acbee5b9e938505d151d75443fa03e5b,glucose-units,The app shows wrong units for glucose.
+207,592a9de4d566619865131e1c6eb5227bf5bd7ef2e31a156f0280f47e44b5f96e,login-session,It keeps asking me to log in every time I open it.
+208,3730d05dd0564f747ed8c76ce503b5832d048d3c0d65d315eae7f72b31c7c826,profile-settings-save,I can’t update my profile name.
+209,153657e4a1f18f6c0514e9d03767970e36cf0b28f940ca33da89ac2480292502,photo-upload,I’m getting an error when I upload a meal photo.
+210,df97493b5bfeb24304eeb3cabf7c128406d888a69d1883d9b588f7876e02e634,booking-change,Can you reschedule my appointment to Friday evening?
+211,56dac2a046734a33044089c5319d998f93193a1a16317c91985e2a408ca63e48,booking-change,I need to move my booking to a different day.
+212,c756d92d17bdc21f06e35e59dd0116fcd03b16ed25a367f632cb1bbea5ec8643,booking-availability,Is there an earlier slot available today?
+213,ef5308bb624fe9bf476bd6353338544c2bae1ea1c86502082936d62a41701e4d,booking-format-location,Can I change my appointment type to phone call?
+214,11289efd2fd1b06d34b136edfbf43be64ca051a4730149316925bf82825b3971,booking-confirmation-missing,I didn’t receive the confirmation for my booking.
+215,2094440bbde383c63bbf223147b1e418eec5f152bb36773328fe5910cdc7f703,meeting-access,Can you confirm the link for my consultation?
+216,19214ff99213bb1a318ea46a42a529ad6c3c00d8fd794aa98dcdc0cae56c5e54,booking-family,I need to book an appointment for my child.
+217,6338bc38a5303284228676a1095d7a57188e53f1745891c5b5fdb7071815b07e,booking-policy,How far in advance can I book?
+218,9191be9abea0504bde61bc40c413bbd6006101434a0d4ad12128bb702d992d15,booking-policy,Can I book two different doctors?
+219,6c8156d76d9dfb6dc217e1bec697121d5c4bd9c488535d593bb14ccefaef4e3a,cancel-refund,I want to cancel and get a refund for the booking.
+220,c83d7c71a3c21224acc2632329931ee1bb5c28d569a3ebbc6b556c1f5056d6e7,meeting-access,The consultation link says invalid meeting.
+221,5cdbc89047e387a93967a88c13123e8de7c3f62ac519d00e5dce06e9c8af62cd,booking-status-change,My appointment time changed on its own.
+222,bbbac069e3252f62ff4db342a0a0e7d3da551fad80e1ecfba64005a1293b61a7,booking-format-location,I need to change the appointment location.
+223,e13443ffd4655a65feaae539a41b0d6fd43ade356642e703321c308696fabf6f,booking-availability,I want to book but there are no slots showing.
+224,643799172afceec6f5173619923dc97ee5336cb6213fe713a380d87de28cb388,booking-confirmation,Can I confirm my appointment is still on today?
+225,522613754fdd54403e3326b2bbd41ee84d2665c7f9075d6c14d0c4aefeccbd67,low-glucose-symptoms,I feel very shaky and my sugar is low.
+226,df3b105b50c56b87f377ba08d0ecd4410d4b209151165342476a93547f3ff715,low-glucose-symptoms,"I’m sweating and weak, I think it’s a low."
+227,a23c6512c75eecdad436e1fe5e7f92ce54d7dd909f954e23a4d811470ee72e65,persistent-meal-highs,My sugar has been high since yesterday night.
+228,b5f6c57e15d9cc3b66209c1b0dd6d26147533166738601be10313b66136d4aa9,persistent-meal-highs,I keep spiking after breakfast every day.
+229,54785ac9c2a0094afa6f07a0095fa664bfbeef11ac23827f0f856cc15645d1f5,insulin-dose,I’m confused about whether to take insulin now.
+230,73bc13b672b3e84d14ce4c912a954af50f7dcbfde4551b37f1527e0a2d19aaf6,vomiting-high-glucose,I vomited twice and my sugar is high.
+231,6eb9b96f1d51029a91012fc1b42c1f07d63d75969cb58987f3b961a5a1c1a474,ketones,I have ketones and I feel sick.
+232,45e3d88531649f3ec5b801268a18e744351c5fd4906fb715df56c38546ac6146,chest-breathing-vision-headache,My chest feels tight and I can’t breathe well.
+233,f6c1e6e2ed86e1a3ecc21741d6a258af2a567718f93fdee055aa70a5ed821205,fainting,I fainted earlier and I’m worried.
+234,d9845e1e2f4fffbaae43fbc4af06b93c86993d7fdc30566361558e40005ae0f6,chest-breathing-vision-headache,I have blurred vision and feel dizzy.
+235,959e2c0eae18c7680fc812cc99a8c9d8a2cfa0c50230f3de0c86d10ec7414185,low-glucose-symptoms,My sugar is low and I feel confused.
+236,a34a20f75ef5b6bfebe9db990f9325d315f57fc7f3e882c390d11c251de0ad7f,chest-breathing-vision-headache,I have severe headache and nausea.
+237,36d4b22e7106f6a7522071879d975df9fd462ed2f769bf0a100fb76919650646,high-glucose-unwell,I’m extremely thirsty and peeing a lot with high sugar.
+238,ce56d335de4dd2463eacca6e297377debc466aa3bfffac272dbc27f95f1b8555,insulin-dose,My insulin dose might be wrong.
+239,f568c21d4c035a660fafa48fc83098590ac8714febf26861f191fd8baf9f791d,night-lows,I’m having repeated night lows this week.
+240,ff69673535f7a1d20b02d6ff6e8b53e7fc2a2a58cdb4c0e0c8c466e7886da04a,positive-feedback,Great app—please keep improving it.
+241,81cc7cae4cab2049915a595d30f26b674ca788653fe24ab2670091d975ed3b47,log-notes-feature,Can you add a notes section for each glucose reading?
+242,8199aebaf5277e94957c9b3db82aa451685f5427b3644f6324c4c99b21f0142d,language-preference,How do I change the language to Arabic?
+243,20c2f1129bc389be0cbfd2db52b7b36fb03ff8dd09a192bb91ef045430f705a7,feature-help,Where do I find my past meal logs?
+244,48c292b1dce26501663afd3803a8a9e3700d8fb1e027474bcfa148ffa39dd3dc,notification-preferences,Can I turn off email notifications?
+245,59570cf1c69cece1101383fd71148ec9824637d3002151f1690afa4b74cb36ea,data-export,Is there a way to share my report with my doctor?
+246,70b70609a8cca580a224d32682cf2cf4326fa74496354224adbe6ed91c0df7f7,home-widget-request,Suggestion: add a quick add button on the home page.
+247,6f0c72014c3628af9d57a0af56dbc72ce1fa758eeef5a5ddd0c5edbe6e4be7a7,edit-log-entry,How do I edit a meal I entered wrong?
+248,d7aa36e19b618de84a162a16f63551f21928c62297bb32168d9d21d093c14809,health-integration,Can you add Apple Health integration?
+249,e18dc12653093d94b63c19737f162379cec439d0a5098592044a44866197eb36,account-email,How do I update my profile email?
+250,940feaac8ecfdeebac77f83cee540b8ac45b08b39114e6786e0329c258a40d65,android-version,Do you have an Android version?
+251,10b0f8023b3cfedb0bac64e6adef21ece7742960eb003c159cb17d3f6a0e2a81,subscription-status,Where can I see my subscription status?
+252,fd7001a612587eb8a86a603489ceeffa4482de4a272c90cff036328f72097318,summary-missing,I don’t see the weekly summary card anymore.
+253,bf84387735a07587606c685d09c354935721f9034dd7dd1f1ee739b070c26350,meal-content-request,Can you add more recipes in the meal plan?
+254,d94913c0065157b221cda4951db084434e86532276a3cbd5bfc6bde77733cd98,support-test,"Just testing again, ignore this."
+255,cbb2f4e0a9591082e85d4f9780dcb44b50faabf9c869910fc2dd91a581261a48,cancel-refund,I was charged but my appointment was cancelled.
+256,db4bfbf8f51adab18423d83738322b174cc88dad8d3982c427dded6cf8d116fa,payment-state-error,The app shows unpaid even though my card was charged.
+257,97c4a28931ef5a42a6b86981b2b755b4c4e8740fde543e0119f8b55634fdefa1,refund-accidental,I need a refund for an accidental purchase.
+258,f2bdae550c27cc133b87b0cb0f66185d4cedd24df266ea1df1a83fab3c4f174c,double-charge,Can you refund the second charge?
+259,670b7587cf4c127df8127fe9d4314e6a1a5853e4bf1f5aa2b72821569a1e2fb1,receipt-access,I can’t find my receipt in the app.
+260,942cfbb721b4f24ce679902cff02e24e7351c27c68bb0d912a56f630f874b1ea,invoice-details,Billing address is wrong on my invoice.
+261,d066d412533c29c4945a0d241662970fa9cac5c37ddcc27cdf5773bcb0adcab3,subscription-renewal,The subscription renewed without warning.
+262,85aacd07d887466d48f1b4ba15938476a0484c6e6ba4cb51f55d133b7eafb381,premium-access,I was charged for premium but features are locked.
+263,6bbe012456e1b9052f9ef7a1e75da085ab82af249ac8dfa1527b83205ed9b3d9,payment-state-error,My payment failed and I was still charged.
+264,49a44bd49cc20d66f323aae1ada445bcad65f6f2b84f70aec639ad36c75586a0,promo-code,Is there any discount code available?
+265,cd9239d0ac552f82d46d33e929e7068a3277e59978d4966de465c85540fc06a0,payment-method,I want to update my card details.
+266,3e235fc741fecc6fe2faa1644b5cd216d1e4473efd9367b3a3027b6b3cc85050,checkout-failure,The checkout keeps timing out.
+267,eade924abe905e19224eaee6b15baa84a8b36666962adfd710d90d1a0ac59651,payment-state-error,I got charged but got an error message.
+268,8fc01f1b1d1e06ae1a4bca97a554796b7cd5fead64009ff5a8fcb896a1559de3,double-charge,Why did I get charged twice this month?
+269,fa5c74f8fe7cb94246d2d8b00212668c6e43ee6d224d440b055b89620035d3e3,receipt-access,Can you email me a detailed receipt?
+270,0c55cc1eb979f65191cdae9b1fb9ffe75c8856accacdfa0584a34a0b7433c0b5,app-crash,The app crashes when I open Appointments.
+271,d02ca82e0230561bb3f02a4171bcea43b242ff9b750072ca5c20ce5a94e25429,chat-controls,"I can’t type in the message box, it freezes."
+272,4577c700903a8f3e47f6a64bb7c5ad06ddc74b843e25b2db0b53cff8f92da8c5,chart-refresh,My dashboard numbers don’t update.
+273,ff79de3e4d6d4a6c1a673330eea877a25beb601512d99ad2202a9b69791c6ba9,page-loading,The app keeps showing a blank screen on Meal Plans.
+274,3d0dacb7ed69e26f258e1a1c30c09fbab74758bcd681360367de4b0cf0656734,log-save-error,"I can’t log my meal, the save icon is greyed out."
+275,91f75f009eceeba608b826713787bdb45c688e32e71dabfa42a028bf1e547337,image-loading,Images are pixelated or not loading.
+276,1f68a02b318733eb7234d828882b818dac414433965411c62f11df9060935197,log-save-error,I’m seeing duplicated entries in my tracker.
+277,276d75d75342db630536fbd9eeae81fe0a8c8d42c074203871ac7ffad78ddb06,app-crash,The app keeps restarting by itself.
+278,14e0026f12739db8a3fc5b857b5e5f489cd7cc5f788da20ddfac8f7ea4b52289,notification-preferences,Notifications are turned on but I get none.
+279,77d7cc858d2f257d91e4b394cf9b077ad84ce5583aaa7a06031cd8346f30410f,login-session,I’m stuck on verifying code.
+280,a581b9a21b27c28c70f3e09627d06972a3ef56d82f05f0e9f5717b6191f02a81,network-service-error,It says server error when I try to submit support.
+281,7693a0213c0e44f29076fd3651a0893ef63179ff819fa093f1569bf48393d11f,appointment-display,The calendar won’t show any slots.
+282,c4556cf5dc679487ca73a8894e566993d9971ebd2c45a231078d3e76d312cd08,app-scroll-freeze,The app is laggy when scrolling.
+283,6000b3cdd2c0a4a1b5b809e25d3e280a5d417d5dce3dac293622ad6045b6cd5c,login-session,I can’t change my password.
+284,65965fafaf4c6fa9b059060d1a0fce2900cc5b7e87bfc3864e632f14df12d307,login-session,The app logs me out after a few seconds.
+285,9a103d1e1705fffea8add370269af2821f481d7dc26a26a606f3385e9647f454,booking-availability,Can you book me the earliest available slot?
+286,5cf34be0220d53d08fb9d305f4d2097e856acb0f9d55cf3a9886a8b460efcdea,booking-change,I need to change my appointment date.
+287,c9dec7f0ec401b798171587661e75b034a2f19e88b46c3e5e079c589df9ebdde,booking-change,Can I reschedule to next week without extra charge?
+288,66299281a9da8cc8f78ddc60d577939a060bc87c6d3fa8cc311dcaa320865f09,meeting-access,I need help joining my consultation call.
+289,d20bcfbbf1f7781925862bc1bfbf0050a7262fbe97929e61bab9cfeb0cd98754,booking-status-change,My appointment got cancelled automatically.
+290,a4e55c0b96839c33aedf1331fe672479d0561f3319e5e302db4dda4706684616,booking-confirmation,Can you confirm my appointment is online?
+291,18ce77815064ad44894db0b87ff86a5d616149a4743c1128f39a900caa8e6ddf,booking-availability,Is there a waiting list for appointments?
+292,5a408367cd02c9d2f98872890a5956c15629898359d193d7be03c6ec009bc60c,booking-family,Can I book an appointment for a family member?
+293,600949231fc0bc9fdeca30d7b314e18c65e78c27ca3f5ce293736b5bf66ed8ae,notification-preferences,I didn’t receive a reminder for my appointment.
+294,981666157eea109be8da8b7073eb5db7a2235d4463eaef8c8fddb22d1ca851e8,meeting-access,The meeting link won’t open.
+295,94e357990e70120f5d01481f70a763ae8111c5f894dd8fceafbff2b3bf87800b,booking-change,Can I switch my appointment to a different time today?
+296,7d425832a59d8c2aaee92a46e716c48b0b78c0048f017df374685ea00a18bca9,booking-duration,How long is the consultation session?
+297,6ae7ada95f98fd7b455fec0fd12285f9e74003c7404bf6975a64f4864a4291ff,cancel-refund,I want to cancel my appointment and get a refund.
+298,ae2ae8888d57da229c0dba335b3aae0fe78412d94a56ffb92c2c017929be1192,appointment-display,I can’t see my appointment in the schedule.
+299,6eb454d9eba0139d5184d0eee8fc98b0f42e8a12f84a716a5b3389b77265f832,booking-availability,Can I book an appointment for tomorrow?
+300,6139e2c42fd91abb423b06c87659db2e6617ec3c280297117ae877e53294c70c,low-glucose-symptoms,My sugar is low and I’m shaking.
+301,917315749f0b27f91f4e37d23ccbd024338bc60c501ef1e732618da2451a45fe,low-glucose-symptoms,I feel dizzy and my sugar is very low.
+302,27f3f609a9a9d9a55d6d5427d306617847b11498adf2b64404c64847a1db05f4,high-glucose-unwell,My sugar is very high and I feel nauseous.
+303,58781163db3807e4d2834e7e67c21b2b2520ac7c97831f1c5277583e09dfb167,ketones,I have ketones and I’m vomiting a lot.
+304,b7105f7e0c69929a4abd9b72891c5d8b0d4831639d133ab360a8a2a3c84408b5,low-glucose-symptoms,I keep having lows after insulin.
+305,f5c5a445aacdd39b5370d47a65f69597d3e59b109478f5c59c7803b28f94721b,insulin-dose,I’m confused about what dose to take.
+306,f779332b1672aefc68b4437a5f16dc5bebb1d6cc48bfcf5bc0b71240d929571b,persistent-meal-highs,My fasting sugar is high every morning.
+307,315d71f4e2c7cad5448ff6471c3a15cbf73dd81838e80363030f4bc63bf522af,chest-breathing-vision-headache,I have blurred vision and chest tightness.
+308,6cd2ea5a9d895e01689e563ab3800f3aa1bb5fa4b5d9ab08824b7c105f5f57af,fainting,I fainted and I feel weak.
+309,e49c7a5986371a4590f480d7cad241c6952f81772c13d848d1316509cfc11fe9,chest-breathing-vision-headache,I feel short of breath and chest pain.
+310,bece604b4f3d0a587b1b5ec62f012f2d6c28d96c92ec06392babdaeac56748b1,exercise-lows,My sugar drops during workouts.
+311,07b9948c56c525a2aa99f278795497c6a3c28cbfeb0f48e34d394600536d20d7,night-lows,I’m having repeated night-time lows.
+312,2b59c69017fcbd5f571c5d6bddf26470042bcc81bee2a2e4367d02b5c95e5593,high-glucose-unwell,I’m extremely thirsty and my sugar is high.
+313,972ef8bbfad845cbe5e1cf6691a75b42a34e2932d6dbe5693c86f598186712ca,low-glucose-symptoms,I feel weak and sweaty after dinner.
+314,333289f1119d54b404c70507aa2d3733c9ad7adc39567340f983eb6907f9856f,chest-breathing-vision-headache,I have severe headache with high sugar.
+315,eb2ff24c7214dee509c0535f3a71d6f382e9c759c46680c06919aefd5a25b4b9,meal-content-request,Can you add more meal plan options?
+316,b6f3a54b13240a214bde58056108805e0c2ed3c7e83e52f0e00d4927a85df28f,account-email,How do I change my email address?
+317,4b974b6289438b4bad962e1019c864684c809e306b0504a15e04280862484585,contact-help,Where can I find the help center?
+318,1d6e083337a42bc69d562d200159497cc9650d2322417e2090f62d27252f1ffb,feature-help,Can you explain what the tracker does?
+319,f51659b261b06ca433c9d52bdf362a84fdb92470601bb567ee83fe37ea99cff6,health-integration,Feature request: add Apple Health sync.
+320,b80d23054297d7775978a9d3c4f77e9d2815b52ff1dcaf1682c4a23fd261803e,data-export,Is there a way to export my weekly report?
+321,d03b5c39e01d1c2e91cda453e312ad064da298b5064dbfeb6d69b3d9b84bd6d3,edit-log-entry,How do I edit a glucose entry?
+322,af4807db8fdfd509589c540e0f2c27098d0c32f77199a17f9271f06a0ad80718,positive-feedback,"The app looks great, thank you."
+323,e533c2713f2c7a1315eba0bf17cf5b3c9fbf6fdb0c07eb23f9a9fabef751ef5f,dark-mode,Can you add dark mode please?
+324,2c67e9830d8b257f194293c969e2de4a1f59763d388d2120bd4888f4c825ea16,settings-location,Just a quick question: where is settings?
+325,ea74e0f2f56a20bd0f52600eff4271d47640f5cb3dd53d2d0833ec2769020c92,feature-help,Do you have a guide for beginners?
+326,f694dc56589db073b1d1caccc3b3162c27c29bef36501f8a0c9c4e446e5c4d44,notification-preferences,Suggestion: add push reminders for meds.
+327,25a21575ac086ca46e7791c6a61719e04b65e8d3f3508bbea9bff7c9c210f69a,account-delete,Can I delete my account permanently?
+328,5341a4d36e17ae303047d4998265d5d0a8c7fcc1e4e86a698a2f77847fbf9e20,contact-help,How do I contact support outside the app?
+329,c78487672b82c82af3e839c1eab10b818d345737029fdd1efe7ab729684f58f9,support-test,"Testing message, ignore."
+330,f64ea31d8ff472e070a791d72e5923f380bb789e54668be42aa240726732a5a1,payment-state-error,I was charged but I can’t find the transaction in my account.
+331,6521fd0db5e1de66becf76fdc052446ef86241af3aff08476066569731e9c10d,cancel-refund,I need a refund because I was billed after cancelling.
+332,9ca4311586ffa58c9d7d2a21417dbaf2ed37b80c73e94d47793b5db19ae780cc,booking-confirmation-missing,My payment shows successful but the booking did not appear.
+333,782f7dfc65cac193b01eeaa532d88f69c389de3fe8f1ec9ef0d2b7d20bdcc872,receipt-access,"Can you send a receipt with full details (tax, date, amount)?"
+334,42fadcb1a384ba9febee40e547222c6365ecf90fc9941f7f72d0f37505020894,price-discrepancy,I think I was overcharged for the consultation.
+335,5f9bea6e20e0ed508c846a4155fe1710d0148a3e9cbf88fcdbbb89efec9ceff5,subscription-renewal,The subscription renewal charge was unexpected.
+336,f20c37eaa3319e02385ab6c02f4c14e0787691fa2f286dabb39725894878444f,subscription-plan,I want to switch from monthly to yearly billing.
+337,85451135a28360680b891fafd4d94572558ce690eb06fc9085a731b2f51cf057,premium-access,I paid for premium and still can’t access premium content.
+338,94384d65731f8570897f938393269433873a9d7edf7cc7f88c2d95417f7b3dc9,checkout-failure,I entered my card but checkout keeps failing.
+339,89b70320901f865dbe47588b88c35364c072163fc9f9c696b1c1f6b4ad66c461,double-charge,Please refund the extra charge from today.
+340,5c29ee71b432f39d39a2941376902858977b52cd35c63d0b24a600491cf2909e,app-crash,The app crashes when I try to open Messages.
+341,dbbf674d52a802c3895b5f6c9ba871b7d4797a6a2f47382367a6bbd386450a86,chat-send-error,Support chat won’t send my message.
+342,7e53783e2468792524667d7887407d88acab8125f45786fbe6e0e5fce9a44876,log-save-error,I’m getting a ‘network error’ when saving my meal.
+343,bdaf769bed4ea70f09724dd23035e17795e72a2b2833009c828c4e4c09facb92,chart-refresh,The glucose chart is not updating.
+344,071a4a485151f01563ade0fe561c4b4de69bfc262948d111dd1167f1e4551f2b,glucose-units,The app shows incorrect glucose units.
+345,57f08fac127c442bdc0bfcdc45681890ddbe76bee7428cdf48be552dc687947f,photo-upload,I can’t upload a profile picture.
+346,9c32d3ea2b749bf0d724033c2645a0c1c90b6652fc6b1b21f7c1155320250900,page-loading,The appointment screen is blank.
+347,577009d5c1ce207fa7380d7a1e26381777f0b79f27d08eb7a48dfbf2b977b7a8,login-session,My login verification code expires instantly.
+348,7e6a17006edbd25986a1f3e65c7f3157412f00737b206930e63234dac70955d4,app-scroll-freeze,The app freezes when I scroll my history.
+349,94f0a9770c9859adf35d6bb2c64aff6b39b8fdaada49941a41f33964573ab958,login-session,I keep getting logged out right after logging in.
+350,6eaeaaa41077af76aca924643ddb9901476b8f4379aacb6010efc701de1e12fc,booking-confirmation,Can you confirm my appointment for tomorrow morning?
+351,0159334fe684de79f2fb871ab97a28bbcc51a3ec80f756701dad3b2c6194cd16,booking-change,I need to reschedule my appointment to next week.
+352,530a289041b837269ed5eb085c61d335ed3aa9082c3fbe2ae88e6fdeb82b34d2,meeting-access,I can’t join the consultation link—it says expired.
+353,13cafcfedeb7d2deced4d26ddc1d65c9c9a0cca663863b7f62f16220e9f028f0,booking-confirmation-missing,I booked an appointment but got no confirmation email.
+354,000cc3806a776cb7d0b55312a88f6498d907e2476f77e68eca3839223c9a4390,booking-availability,Can I book a follow-up appointment for next month?
+355,822931044ca33310127e2acdbee89bed0031549225e098e2ad5cdd79efce5cf5,booking-availability,Do you have any late-night appointment slots?
+356,476ae2ba41786ac425ed28cf614a2ffae4da04e134138fa38b99569eabeaf596,booking-change,Please cancel my appointment and rebook me.
+357,2d8b01ec32658a6265b9d05578829fcb185032053db0423a455e77f9c7fb1154,account-email,I need to change the appointment email address.
+358,ca96a2c7564ccdce98b0e1b671e0878ec8092027b3da9148a614ad3e27c6f156,notification-preferences,Can I get a reminder 1 hour before my booking?
+359,daa4f84d9dc2eee4f730736b2bc60f0dc028c504b01dee10fbc4565ab9b60557,booking-availability,There are no available times showing for this week.
+360,d7930474e41418205aed6be5bdb248464bbd023faa1d576daa27d8be83873dce,fainting,My sugar is low and I feel faint.
+361,8e6fbaadc37eea94b0eaae0e3bd46450a1a15417019d6770cb3f16e512977f7d,low-glucose-symptoms,"I’m sweating, shaking, and my sugar is low."
+362,3171683eabc51f34d6b1bb906cb13291271cb35a324f3e721311eca9075f3212,chest-breathing-vision-headache,My sugar is very high and I feel short of breath.
+363,67c8924c67c90af4a1e0c5c945d766b090c379dde64653d7e27aa5dfabfee4dd,vomiting-high-glucose,I’m vomiting and I think my sugar is high.
+364,e737be22a2d80d668af587e7f807ae62bec4d96196faedefb1800fe31a9adc9a,ketones,I have ketones and feel very sick.
+365,eefec33307bfc122283196e0a5a749b7c58c70ceb039491f0d0abc3a5b048953,insulin-dose,I’m confused about my insulin dose for tonight.
+366,369fecdeddbc9b4e33190a7af321415603cd7f4eaa065e086bf07396e4f99c8e,persistent-meal-highs,My fasting sugar is higher than usual.
+367,4c2151c3ce3922b8e1ffcf9edb95df0e8776eb47b3d210de25b2ef68c8ff96e6,persistent-meal-highs,I keep getting spikes after lunch.
+368,4d9c9a1ab607ce95001885858629e59ef09fb6968ea9596700a9099f72186c89,chest-breathing-vision-headache,I have blurry vision and feel weak.
+369,97a901e55d7804e86f0f80b5cec913dab8b631185d2626e7314686c6426eef70,fainting,I had a severe low and felt like passing out.
+370,f21b4061a415a34acb536428a964b87ed00b1dc2633ce27c058ba92045753893,notification-preferences,How do I turn on reminders for medication?
+371,e5f13a5cb4bd2c789ae763caf00f12a2de456ba9af3b671e492b53632de1268d,meal-content-request,Can you add more meal choices for vegetarians?
+372,448bc11cd5832920df8357b2ca2cc3bcb633811e88f9de30e3774367d43432ce,feature-help,Where do I see my weekly progress report?
+373,dff3bb86310c9434d7854ffdc9800e34b9d6266296b3fa5ce3f3010c938b7bb0,contact-help,How do I contact the clinic outside of the app?
+374,eb74e431f8cab2c44b962fc45e4f21bbae409c673514eafa964e6f0fc325290e,data-export,Can you add an option to export my data as CSV?
+375,f39667ec736571ea26aa4ff71132df0c42776eebade1d6a038f8461efa97da5c,glucose-goal-feature,Feature request: add a glucose goal setting page.
+376,ea93d5d3594de6dc8fabde8ca88e5e786cd42a975e238905629aa99e14539d41,feature-help,Can you explain what fasting glucose means?
+377,b54d916ebaead6df85b9aef882ad3df6137038d3eaccc90266f9e2e8fdd947fb,positive-feedback,"I love the app, keep it up."
+378,466e7c5d4ee81c4012f5d18f6d8e3c733bbe08581e7285238bb45d7d6f8b73a6,settings-location,Where is the settings page located?
+379,b9385ab1056c452011b6126e03311fac7b58ac6fd6f39e3abf5417eaf2c33d8a,support-test,Just testing support again.
+380,e9685dfd054dc533d08567e62f20f3eeb85fc57878093a8523656bd8f9ebc5f6,cancel-refund,I was charged for an appointment that got cancelled by the system.
+381,b6a8faf1b4ccad3d2a67075a3dae60a36e7e678cf5aa155b8cc8c85c893a69c6,payment-state-error,I paid but the app says my payment is still pending.
+382,8599da52a5125e4bb37e053a2d78681d183ab464bcf8b4a9cf089453adceab68,cancel-refund,"Refund me please, I was billed after I cancelled."
+383,5fb20a2dbee21b059e7c2cd4ab23103f96730490f8b72f3fc846d0799d0bec16,double-charge,I think you charged me twice for the same session.
+384,00f4015f0fbf655742cb31cb53d26716de9144dd06bf3716c590d6b1fea203d9,receipt-access,Can I get a receipt that includes my name and address?
+385,0bc5a2f7c6a673a776d0dad8111519666fb2ad1173668abb1503a3997213e371,invoice-details,The receipt shows the wrong doctor name.
+386,bb2998f0499f317c99ee357e59d79e0e58f72b37e92fc850a054f1a62a0897aa,promo-code,I can’t apply the discount code at checkout.
+387,4a6f4f17dd7a2f9940b6649cdac39b1b5a75d92156421a83490aec386b788424,payment-state-error,My card got charged but I got a payment error.
+388,40a5dc61519f8ae060bc51f63d770db34412cdb17b5b072fd3dd9acab76f7c4d,invoice-details,The tax on the invoice looks incorrect.
+389,9a73c416fb25dd0af25292df23d91e55548ee2aea8539c6d130f613c29b45443,subscription-plan,How can I change my subscription plan?
+390,2114a71a9c8d4fe7e4f76b96c9aa40f1883a9e7ef4aab97a6041efde87169669,app-crash,The app crashes when I try to open the weekly summary.
+391,00cc24501f8f9592e5999f50d27f4bc2eceee6a531b8128053f9aeefeb015622,chat-controls,It freezes when I try to send a support message.
+392,951214a4a5024cac18908c26306c99e626df9a1ee26cc3871eb9434b79e521ed,home-button-error,"I can’t tap the buttons on the home screen, nothing responds."
+393,bc4361a7a3c9cc3929d905b2b29ee4b44368a6ebbdf455c1fea3188549174ac1,login-session,I’m stuck on loading after pressing Sign In.
+394,8bdb0bc4de676cb941f337d477368197bcdfe96840063fc117d9b0a42af79361,log-save-error,The glucose value I enter doesn’t save.
+395,647745300d1b78fb8f12dd9b7146de5009b6d1eded8a4db6334c76eae11f9e46,page-loading,My meal plan keeps resetting to empty.
+396,26eecb9f39482bb084fcb2320fb8764bc52ec19cc6b327f6b80f8b22cbe13b74,appointment-display,The app shows duplicate appointments.
+397,db900ded51348bd1ac8e3264f0b8a27408925fbc0bee1feb7a5336fd067dfce6,data-export,"I can’t open the PDF export, it fails."
+398,05cc405d812833bc7670896eae00d69637fde4dcacfaa246dc4edf760187a397,network-service-error,The app shows ‘server unavailable’ right now.
+399,87f58fde7ec5ef68848555fbe68cf75ecfda9261733567b6b12860cef61b45a5,notification-preferences,My notifications are delayed by hours.
+400,292938bf921ada2c7befa22894c54256c7e0b160ca018f95f82340480da5addc,booking-availability,Can you book me with the earliest available doctor slot?
+401,9f052260644ea6d8a61a84ef7a7e80cbd986b0e1f113c6cd6e886f9e13d262f7,booking-change,I need to reschedule my appointment to tomorrow morning.
+402,7b7d310ce8696a62b9d3d941ba491681d0011ff94291e0aac819d2586a601a7e,booking-change,I need to cancel my consultation and pick a new time.
+403,6d47445200ed09c55fdecc136ecc195343a37fcf019e0ba502df292625e7a8b4,meeting-access,"I can’t join the call link, it says meeting not found."
+404,cc6ebd29890c6df206f756415adde17edfb059cce333f178a0d08df804270cfe,booking-confirmation-missing,I didn’t receive the confirmation email for my booking.
+405,a4cd0e450708d25e9b45f83909675cfd5dc6a74a3b707db60f572c420af7a05b,booking-policy,Can I book two follow-ups in the same month?
+406,5f6b8d5774efa2035ccb69874c967343e0eef256d661ef4eed464f06e241fc42,booking-timezone,What timezone are appointment times shown in?
+407,27a857e5de5c58198e146455c31aad2b260c12fbe5b78b565946a6b59f35e31a,booking-change,Can you move my appointment to a later time today?
+408,693ff4a80ddaa3e30f187480f2d907c91288f6000abd5cb1bbc9316c4ffe2001,meeting-access,Please send the meeting link again.
+409,97dba2b5718db77abda681ebeded426e358dbe864cdaae25441969104cbd8ec5,booking-availability,Are there any weekend slots available?
+410,29b29adf323ff2650eb72e1c115aa084718147494378a3e16ffa23ce3817db40,fainting,My sugar is low and I feel like I might pass out.
+411,48676f4086a7550e957f3b75d00d1bd97758c56d4a41d0a19b89c860c536044e,chest-breathing-vision-headache,I have chest tightness and trouble breathing.
+412,d87b25aeaeb4681bd3278e8dc985773b3e07c69f33efa76e7f02ceeea40454d8,low-glucose-symptoms,"I feel shaky and sweaty, might be a low."
+413,cd719abe1396a8792c17cd3046d4162a5c2a149a58df8406e24c682620380d80,high-glucose-unwell,My sugar has been very high all day and I feel sick.
+414,155c050737d378d42fdcffb33b522c3d2ab5370906c89b742e4f358c905e9557,vomiting-high-glucose,"I’m vomiting and my sugar is high, what should I do?"
+415,9f71893ce43a8c05b8059415c2c25980c07dfbc09d4f33268a80d85cfac7c465,ketones,I have ketones and feel nauseous.
+416,93c05761245923a7914b25f1da1ecab747197a2f19f1c120863075cba73b0b9d,insulin-dose,I’m confused about insulin dosing for tonight.
+417,6a28d98bad7f6250fa6a71c144fdcfef7e11bcb286d8d4efde2ddfa14a5334c7,persistent-meal-highs,My glucose spikes every night after dinner.
+418,810a34e1f8b51fe1217738ab28ec28e05aeb5aecd6d16ae362b028e8cd3a3b0a,night-lows,I keep having night lows and waking up shaky.
+419,ea09a5d7330170164b78b6ef31d949b60dec76f060f0966fe5ca4c9eebb16c19,chest-breathing-vision-headache,Blurry vision and severe headache with high sugar.
+420,aa708a36dd59469a4d26fce35ae1f0b6f3fa19de62cc017f78e3886a36055c99,meal-content-request,Can you add more recipes to the meal plans?
+421,873947fafe37eb9bd84093b52f58b864997a96769a4f978a4c70cd47d3bab74f,contact-help,Where do I find the FAQ or help page?
+422,0c85d361c887c128fbac0815cb29f26f38405b0e815bbc65d21e5cfd331e602f,password-change,How do I change my password in the settings?
+423,40f81247c79b757e0ca6dd15f080892eadd6f13208cf1e03d7ef4876af8cecd6,feature-help,Can you explain what post-meal glucose means?
+424,5ebd2899cf7e557ec0fc6dcb54d0fcfba6e549c739d35a5cb2f96d1755c33068,streak-feature,Feature request: add a streak calendar view.
+425,cec465dd24b0724695fbb387e96edd632e8a9fc8beb7c9d1a5f51f2a4de93d67,data-export,How do I export my data to share with my doctor?
+426,be82cdb921bddd1820efe764e5df25a29ea42a0ef583eb0f3e1b1762527f1edc,notification-preferences,How do I turn off push notifications?
+427,4399adb2fcb252c2728ef78978109f24e1992332c515fe8ebdbf6f2e89c60752,positive-feedback,"The app is great, thanks for making this."
+428,e3c02ffbf0e4c905293311f9e7247f5f47ed9e992b296114b17e9be6773b93dd,language-preference,Can you add support for Arabic and English toggle?
+429,85face5bb1affd03470dc920e80b0c562516996cb789e4e21b2882d169fb037d,support-test,Just testing the support inbox again.
+430,a0337cb156be10cfc8eee608a71b023c63fcc072cf4b8cfa9d1ad2d36a6c7214,booking-confirmation-missing,I was billed but I didn’t complete the booking.
+431,493b4b6f038eb2d165b49740d474b744c8ce517e4782f607a07bace5d9994931,cancel-refund,"Please refund me, I was charged after cancelling my appointment."
+432,46f750e364dbd202dddce532e50964d0d95f8d263f10d165348a8aba1af8ea73,premium-access,My payment went through but I can’t access what I paid for.
+433,0e92134317c804875cb9b26dd3bcdd842143be4ea161a878db1b09a61d7535ee,double-charge,I see two charges for the same consultation.
+434,417164f937b7a14d1d187668c3f85d7d9bf8d3c130526397e6f79ecadf2d8250,receipt-access,Can you provide a receipt with tax details?
+435,ecd43a608f53681f6bb57592ae94434d04036919ba7a4a0fe04ddd2d47237224,booking-confirmation-missing,The app charged me but didn’t confirm the appointment.
+436,a15fa7c06455dd32ef5243fb1d9c89f0ee6ddbf3e701888789be8ffcbe8f2140,subscription-cancel,I want to cancel my subscription before it renews.
+437,357f490ee83a29fe40c806efcff5f50e9760565bd01bfb6afa330ad3b42b75f1,payment-method,I need help updating my card on file.
+438,d5315d655d2e96cfbff7dd37081fb08c0f990f50677bd2b1be692b2071da41b1,price-discrepancy,The total at checkout changed after I entered my card.
+439,589bb8ebe4c8c73566044869d828fdb0f6971e281ca556fa6cfad10308686982,price-discrepancy,I was charged a cancellation fee I didn’t expect.
+440,ae8ff98114acccf281f62f25eaefe3c1d93d2d43d81f9d1c4e9ff6abf5af1647,app-crash,The app crashes when I open the Support tab.
+441,710760305300c12002dda49d7b51422d0571a2e40ece583ec14f201b6378aa23,chat-send-error,"I can’t send messages in chat, it keeps failing."
+442,79923c5981fe86437015820a5f422669619d4b17c99dc647208346b9e61b35e4,page-loading,The tracker graph is blank for the last 7 days.
+443,3df3fcf035741b57263c74b6f179af1d8f4754ab0b99c7173dc2d95d84677cf6,log-save-error,My glucose entries aren’t saving.
+444,a02802bbd5bb47c04f61355e99bf565b69e06d7a55e4f6f51c43d911fff8787e,login-session,I’m stuck on the login screen.
+445,c2e2e115e500218f046fa6ca9369c4d39f8ba3bcacd260b429eab0fa3d7c3340,appointment-display,The appointment page shows no slots even when available.
+446,8de73619cf76fb6c1eb79e9859b92b21117948967e021f60c8e411d86a1ee9f5,notification-preferences,The app is showing duplicate notifications.
+447,866ba868102008858ded6f85dfbbbce8b5748898ac2a98bebce882383079ca9b,data-export,Export to PDF fails with an error.
+448,41df7b2c2ee1b9512a3d596971e5c961d52b4370d6b22ebe258123e2ee8d41ab,app-scroll-freeze,The app keeps freezing when I scroll.
+449,1c2d8550d668110026e92b0d206dd3051ee824867473da4cb855dafe92034ed1,login-session,It logs me out every time I reopen the app.
+450,8922d5c5e80c84b299efa168c3ebc378700f125e455941e4ac2a61e3d3e772eb,booking-change,Can you reschedule my booking to next Tuesday?
+451,ece57f50c82f2f6444b697ca51bde7cf263d76a2a001d15f0a708a75ac871e75,booking-change,I need to cancel my appointment for today.
+452,2a9ffc3d7db5e5780186a6b42601f8b0885ca981139bc8775a1b170c725f5ef5,booking-confirmation-missing,"I didn’t receive the confirmation email, can you resend it?"
+453,c14c0782162f76363db256b8eab6c50aa1f5d32803ebb8ca2a4303559de32693,meeting-access,The meeting link doesn’t work for my consultation.
+454,012cf79c21597a1c08ad7ba7aedfc9cb2f0585c15bcb674e71cde4b9f09792fe,booking-availability,Can I book an appointment for this weekend?
+455,9201e6b13fdbf5d86d842a33581a60f62fb75970e6198bbffc4aae999809e73e,appointment-display,How do I see my upcoming bookings?
+456,35f7078c528a1d9c40d140a39806293c0558482aecf74fdc0694120031d4eb3b,booking-change,I want to move my appointment to a later time today.
+457,614d87aaccb43460744539ad058b9cd22e92b44274dd815b0db7248e0a36434f,booking-availability,There are no times showing for this week—any availability?
+458,e97708dc689cd9aa82e8a258308b7e95b44672226c23e44efdd3fd79f00d57e5,booking-availability,Can I book a follow-up appointment next month?
+459,ec31ce50e8d204dbee02e6b657d0773cb2dac4abf79879eafc2cc0fc9b22980b,meeting-no-attendee,I joined the call but no one was there.
+460,d1ac694162826459eb1663aedb8fc04cd4f9a8bcd6a3c47de53948deb62e1a23,low-glucose-symptoms,My sugar is very low and I feel confused.
+461,ccf2833adfd3a462874ed990c1f27e62aae004280557247b17f426372d4c83a9,low-glucose-symptoms,"I feel shaky and sweaty, I think I’m having a low."
+462,e77875b42f640000659b366e5425adc206caf952fa859f4daab62fe4ccf2c80a,high-glucose-unwell,My sugar is extremely high and I feel nauseous.
+463,cf5c879b29c9b767847c1a4c4fb1479ffa6e830a8a02d0f267efa14847924bd6,ketones,I have ketones and I’m vomiting.
+464,52f273765e0123c1e56d8e498d7e4a90bd2badaddc9b61fd0d46eee71f674ea7,chest-breathing-vision-headache,I feel chest pain and shortness of breath.
+465,5bbc9d408be7bd26509d1685cc8038f9076debe2d577dd7dc09a840a2da2d9a2,fainting,I fainted and I’m worried.
+466,eefec33307bfc122283196e0a5a749b7c58c70ceb039491f0d0abc3a5b048953,insulin-dose,I’m confused about my insulin dose for tonight.
+467,185b23de990c6e427eb864638c4268f3ca665dd5e67f30f78ec12ef5cab4fb99,night-lows,I keep having night lows and waking up shaking.
+468,2a242b3666df6bc56fbb1db2332301048b6c00d91d0bf6f4b28ec3ea37572b6c,persistent-meal-highs,My fasting sugar has been high all week.
+469,97863fd1f2366f13fe33ce944f9af1ca5b104057dc3c730dbc63824c1542718c,chest-breathing-vision-headache,Blurry vision with very high sugar.
+470,2a52e001f73970108f3cba25541eb9a5a2cc7f9142cccd8a74854c5d5250cfad,meal-content-request,Feature request: add more meal plan recipes.
+471,7e6b15fc5ed7f4387ad8331c43566ae0ddfab50e46e52169bdcb6c08eb9db62c,glucose-units,How do I change my glucose units?
+472,e20e4a5d2c42fe133fa3825f2aeaf7b1a3673a43fc7c7a5e3bef4721c69dcf17,settings-location,Where can I find settings in the app?
+473,f800c30e68385a35b9ca7790434f70aeb7392cda8a3341048ed27b5763278ee1,feature-help,Can you explain what the dashboard numbers mean?
+474,aa6dd73b48178c1adcf4c874c82e4404699bb52f39e0702acd4df52126a03d7e,notification-preferences,Suggestion: add reminders for meds and water.
+475,2576ecf19e0f78461b3145d6f651a18ba5f4cf2acd377d1d6cf43cc15bbc1566,data-export,Can I export my logs as CSV or PDF?
+476,5d7c6426e4831810e49cf2ad4c4db23228b4cfab0f7ef7e7e7b82f68c43a6813,edit-log-entry,How do I delete a wrong entry I logged?
+477,fd09dbe38e5ddceb3e7525925e0188668ec5420d9738a47890d136727608305a,language-preference,Do you have full Arabic support?
+478,eb1a985207d338c8fb2d3116e591bf37446feb6377151cf5e22618530f45433b,positive-feedback,"Thanks, the app is really helpful."
+479,d5eb267b8394a26630ba19b1005b6d6fd1e318318ef235ffc50037fa43fa2a47,support-test,Testing support chat once more.
+480,9da355728700f9911449a3c205b49a73a4cddbb24d0eefbf1a76b400eea65043,booking-confirmation-missing,I was charged but the appointment never got confirmed.
+481,94f506220c3646a1935ea378223f67485973c057f2e89bba952959c49cab383f,cancel-refund,I cancelled my booking but my card was still charged.
+482,3689adac0d1f2988bac719b684de54370bb5766cfef8d594ddb259059fdda639,receipt-access,I need a receipt for insurance purposes.
+483,fbc4f316e87a916c967b8a5bd8883dd37d183894468f3b7b68e2f120bf60a2ed,invoice-details,My invoice is missing the tax breakdown.
+484,b6d5ef5a714edfc0137e5355165f6f60df81545a37204a8175cc61bb00781dda,double-charge,The app charged me twice for the same booking.
+485,b90919f76a58609a04d7198b98f344ed1c1d351cc6a0de4d1aedf94f38c565d9,double-charge,Can you refund the extra payment from today?
+486,5ec624321aee994f6440e3f00d4faad24a7f37c9691c83f8ba75c70c492ea621,double-charge,I’m seeing a duplicate charge on my statement.
+487,98964a5b5e0299aa250e6f69b194a768e24739ba44c2d2880c8046ab7388f39f,subscription-renewal,The subscription renewed and I didn’t want it to.
+488,f8beddc07072908a364ccb254328af026ee0234f13c802078d2d33578416d72d,premium-access,Payment succeeded but premium is still locked.
+489,7cc809b02665c6e0d81f95fef88e1f10f84ef73caaab1c21f9d945470194de7b,promo-code,Do you offer discounts for students?
+490,468aa503888b9c5dbd4c7f393269045b49c53ca7e094d5cd7d7263630c8573ee,app-crash,The app crashes when I tap the Support button.
+491,74b7d8186686e8de3924ed752facac9330612b9a1b37aa7320336669f5554cbd,page-loading,"I can’t open the tracker, it shows a blank page."
+492,637b3b066519c7a32c81aff0d28e64f635815b94989eaef6caf8bb592916b1a1,page-loading,My meal plan screen is empty even though I saved meals.
+493,21017609b68f903e7341c4a2a54de5fd78a424f47512b0278abbec099ba06364,chat-controls,The send button in chat is not clickable.
+494,a0a90cdf810645ae02bc2067fa5e2b9bee9a9f18bad7676e67771fe7e5aa9d98,log-save-error,The app says ‘server error’ when I try to log a reading.
+495,25768d53f160b773031befedf2b1281cff22dc7f48e69a8a02524a58501acefb,page-loading,I’m stuck on the loading spinner forever.
+496,f670fa7d84111744ffa32e381f00dbbe3750b37921ba291ffa2b5a9ceca7132f,login-session,The app keeps logging me out instantly.
+497,2e26e21717730fccfd8013fc07fde7f77becfeb3700fc769edfc4ed4c6eefe27,profile-settings-save,"I can’t change my settings, it doesn’t save."
+498,b9de96f2c565e49a784dc543838a4ab076296e80658faf06f37007c021be6ee8,page-loading,The glucose chart is missing for the past week.
+499,9dabe23921e30b627644415139be181d9373e7da7b8703e4ba32f81aaab0c074,login-session,I’m getting repeated error messages when signing in.
+500,ca9efddbc5b20e6d2952af225b47b528d2eaab9bbaeaabf8fc5491b6f812c7a5,booking-change,Please reschedule my appointment to next Thursday.
+501,086dbace3aed6f05b662c29651ca34d48e15a215b5ef570fee886f633a0bca27,booking-change,I need to cancel my appointment and pick another slot.
+502,b67a62999ecd4e94877ad8bcb74d749fa9ac85ef306455db81d8ddc7e629ffea,booking-confirmation-missing,I booked an appointment but got no confirmation.
+503,55f0400666e78cbc53afd3e466bffe7b0d3ebe4d870c7d1790a2cb86547c47f0,meeting-access,Can you resend the consultation link?
+504,ddc132b94b2962bf371687b577f186a85bc4a89567b6d960ad7a5010e0ecc6d0,booking-availability,Are there any same-day appointment times?
+505,000cc3806a776cb7d0b55312a88f6498d907e2476f77e68eca3839223c9a4390,booking-availability,Can I book a follow-up appointment for next month?
+506,2c2b6eb9b5259797c9cdabd5b4cbd0f5a6b8ae912f98f8f1a9d053fd090d1f5b,booking-timezone,What time zone are the appointment times in?
+507,d46b431d5b8d5e27507fc9f233d6dbbc4765eeaceb60f9c6aa9da53e3cace97c,meeting-no-attendee,I joined the meeting and nobody was there.
+508,95485e5f8852947f97f807e0cc223d75be0a87e5ec6e579c721dff42d7b31268,account-email,I need to change the email linked to my booking.
+509,47d74a36c157ecc794747958e82353c77e3ea6c68d2a7acc3508d74b4b42d9cc,booking-change,Can I move my appointment to later today?
+510,10c1711cf68cf09ca64bd2424737e8136c76284791cdc7cf3125d7b1419a0ffd,low-glucose-symptoms,My sugar is low and I feel shaky and sweaty.
+511,430959e51cc0ec1b23b98fd9ec5dbfab9cee215f78f204fc957ab98a45f9ab36,fainting,I feel like I might faint because my sugar is low.
+512,48ab9b28541a07c36ac6f5caf218dd18b48cb81f4cffd99007752c342596e2cd,high-glucose-unwell,My sugar is extremely high and I’m feeling sick.
+513,ac7064a9b62a7e7478f9d114c05b2f0ca2e5a981846cc51245bd66e6e4a92ff8,ketones,I’m vomiting and I think I have ketones.
+514,3d0d55e900b72ab89850273a4612325ede154e05e8af58da2bbe4474133d0267,chest-breathing-vision-headache,I have chest pain and trouble breathing.
+515,174aa76a01e56b1ebc4d245a5b8c87ec979de59ca8d7711fc55c8a7204b3cf16,insulin-dose,I’m confused about how much insulin to take.
+516,94eecb12bdfbf01ca3a3b691e668c21374879cd8c0945b2e04f656916d917fa1,persistent-meal-highs,I keep getting spikes after dinner every night.
+517,f568c21d4c035a660fafa48fc83098590ac8714febf26861f191fd8baf9f791d,night-lows,I’m having repeated night lows this week.
+518,52b706add3b63e13369833adff2933fa61e4e12fb553af7294aa1ebf5f810359,chest-breathing-vision-headache,Blurry vision and headache with high sugar.
+519,52377ede2d1f3aaa5775c39faf43d4867ad870a949b3a90de85623c76aab640e,fainting,I fainted earlier and I’m scared.
+520,bf84387735a07587606c685d09c354935721f9034dd7dd1f1ee739b070c26350,meal-content-request,Can you add more recipes in the meal plan?
+521,bafea2c0e69de296d0e60d6d6d39f64877c89712dca367a369bc03f3e50d85fb,settings-location,Where do I find the settings menu?
+522,8199aebaf5277e94957c9b3db82aa451685f5427b3644f6324c4c99b21f0142d,language-preference,How do I change the language to Arabic?
+523,4f15b00e76f83c88bc836ddc0deb664dbc745389ecc986554b6bec5714b7c648,data-export,Can I export my data to share with my doctor?
+524,423c15c30405c1795ef7080f95c74701b02389a257b1f385d225cada5a992cdd,health-integration,Feature request: add Apple Health integration.
+525,3d248834c9ab25d00ec9c401fe8b2b72c677afaa8e90203eff324a0cbf58f474,edit-log-entry,How do I delete a glucose entry I entered wrong?
+526,40f81247c79b757e0ca6dd15f080892eadd6f13208cf1e03d7ef4876af8cecd6,feature-help,Can you explain what post-meal glucose means?
+527,5073abef94965f45d298b74486c924f4a058b9828ef113c68d8e965f5ea945e5,positive-feedback,"Thanks for the support, it worked."
+528,b7dc11f28cd16aae1083ba5aac3f3c45d71f004dc86e7baeea43f5cb29c466ab,support-test,Just testing the support feature again.
+529,8b4727e1900bc2f8285f93548e5088e7e20a1dad8317842670c73c97a043a221,home-widget-request,Can you add a quick-add button on the home screen?
+530,6ed1340750dd4043c74af19c72639c8d30d416843030240da0bae6bf9ac1aaec,booking-confirmation-missing,My card was charged but the booking failed.
+531,88abca19a40d670e4e6c26df307203b9499e656e25b1e9cc5615e7a289aa5266,cancel-refund,I want a refund for a booking I cancelled.
+532,ced881b9e3c48f639f2be915b1a244a44e78a2b77cc72633233765de70956297,payment-state-error,The app says paid but I’m still asked to pay again.
+533,9c8964eabb1479a026b446af34752dd984177dd19529cca572603e9c0aee8204,price-discrepancy,I was charged the wrong amount for my consultation.
+534,f75e9693730e89ccbe065da12ee7c61a4cdc886d0c56c061ffe021d6f197b78a,receipt-access,Can you issue a full receipt with tax breakdown?
+535,518d12e505faeb9e92c360cb8a4a7f72b209c417b589f989dfa4530a08d9b0ca,account-email,I need to update my billing email address.
+536,1b7dd8d2c06af289cc93482865084b28fea191ce0978d3e827e263a536a11613,subscription-renewal,I see a subscription charge I didn’t authorize.
+537,a8e82b20d95093f81a875b8b8241a7314490ec9a322268048d94bd79413fc0a8,subscription-renewal,I was charged after my trial ended without notice.
+538,df276d5fbfdf9a50460fb69557111d1000c812b55976d7a9d223543f276331b6,premium-access,My payment went through but I didn’t get access to premium.
+539,f365197d5973d51dd92808b62f57bb05fdd751e428451f11557876fe157b417d,double-charge,Please refund the duplicate payment on my statement.
+540,03f9618f1b5149b7f62edf65629f01dc0ac08410349ba9948df13dfd6eb7477f,app-crash,The app crashes when I open the Courses page.
+541,000382ae3f449e9e92e63537d018cd30c53d0a82f02095b653ccc20e1c4bee6d,page-loading,The support chat screen is blank.
+542,9194250485abf3ca71c2820addca9fe85953b894f3dd1ba352393ac8c8a5cdf5,chat-send-error,"I can’t submit my support message, it keeps failing."
+543,abf533ced90d37d7a7d44de945eb48e4027ce84b24e10ddac643f667340bf496,page-loading,The tracker won’t load my last entries.
+544,4985ee7d0d3aa483b73604a4025da7614abb321077b01396048df5911693a5ad,log-save-error,The app freezes when I try to add a meal.
+545,599857346aab18dc290eb57c347218062b2b10907c239b18c14ed63829d3ab1f,notification-preferences,My reminders are set but never trigger.
+546,ceb3f10d0bb208f351a6307478fb94b43ee150587c72c53a695e12c888eb07c6,appointment-display,The appointment list won’t refresh.
+547,9b4bd475160b881dba1122d981fab2163813b4564a78aaa35e8a33f02af4447c,data-export,I get an error when exporting my report.
+548,59a86c037ed5bc44fbce0b0e5ab96b13612a63d827c14916a02ab204b4e7bae2,app-crash,The app keeps closing when I tap My Tracker.
+549,5d1c55214d9244d882f8e9e74b88e90381493a10bfca10fe155acaf767b51ef0,login-session,"I can’t log in, it says invalid token."
+550,fb6cb28a5feeee022b2fbb43b64114b8ad0a243515a7efc6e5fd5fdf39851f87,booking-change,Please cancel my booking for tomorrow.
+551,c3735dcde3d4935b0edb6a514bb183b279d8b7b6b14fd78cd05cf79125d66533,booking-change,Can you reschedule my appointment to next week?
+552,a228f9a51de1d611275810ca5ec5980b6250b652e2bce6de3c0a5db7b0fdf277,meeting-access,I didn’t receive the meeting link for my consultation.
+553,5f516bd8df7fd542133ff39b2087084d84e559e7ade22ee5c706a1b368ca0b24,booking-change,I need to change the time of my appointment today.
+554,d5e968a742edbae4f950156f056256a02c22a4dc5bbe91ce1255c48ff28ed35a,booking-availability,Do you have any openings this weekend?
+555,0de66a9ba9b9f99f89e27881829315e4a57e8f27aa8d76a4a609df953be5c854,booking-availability,Can I book a follow-up appointment for next week?
+556,e76a2096945b275a7e614fef3774d55c91d2b7a357186c92cda8ea26e39fc042,appointment-display,My appointment disappeared from my schedule.
+557,10e13fd508e81f3cc5fa8885a69eb88730569c4538b8f82d9401885ece1bc6a1,meeting-no-attendee,I joined the call but the doctor didn’t show.
+558,427e2aca6c49e188507fac7230a0a58188c7388b6095136c9ccfe16b508f0a35,booking-confirmation,Can you confirm my appointment is still active?
+559,3673f8058542245da5710f50d08036b83c61c045b4d7a43baafaf26061f45df3,booking-availability,There are no available time slots showing for me.
+560,c875ee27fe903c404bf7132349adb285a43de9ab2ea17018cbe103003a1d544e,low-glucose-symptoms,My sugar is low and I feel weak and shaky.
+561,a7c8903262a056af7ca82c632dd36e6ec334cbfbec1d136b7685476c862ba6e4,chest-breathing-vision-headache,I’m having chest pain and trouble breathing.
+562,cf5c879b29c9b767847c1a4c4fb1479ffa6e830a8a02d0f267efa14847924bd6,ketones,I have ketones and I’m vomiting.
+563,4f712742463c4e4e038754a8c942d03925ac42fff93cf69af18f2458704ea6e2,high-glucose-unwell,My sugar is very high and I feel dizzy.
+564,1a1e0c14c6122bcf5acf862c4fdb3f62bc6d434103346b1791f1b9c5b7e62abf,insulin-dose,I’m confused about my insulin dose right now.
+565,95f3ee1430a6d7bdb59c914a90c761e41d946e050b7d0d5650f68d92c647b058,night-lows,I keep getting night lows and waking up sweaty.
+566,d6e10b825f99920d96f1db6cbbe2476c491aab5420cd621c050dc278b17ac2c9,persistent-meal-highs,My fasting glucose has been high all week.
+567,ed1743965c406a22f7418ea8916c6a314b674d715833ebadf21a4b06d6b2a752,chest-breathing-vision-headache,My vision is blurry and my sugar is high.
+568,52377ede2d1f3aaa5775c39faf43d4867ad870a949b3a90de85623c76aab640e,fainting,I fainted earlier and I’m scared.
+569,29be506861c692e0920ae4aca46cf327a68a04d130ff42d24f0a87e8ccf2df7c,chest-breathing-vision-headache,Severe shortness of breath and chest tightness.
+570,ebc3c63feb4bff6c9d5f15f2ae1a57a5705fdb6ca3cc67ebda22749c841d6367,meal-content-request,Can you add more vegetarian meal ideas?
+571,ff11078eada21b50b7b802b2d1935e53fa541fcc6fb58d4f49210ef95adc3d17,notification-preferences,Where can I change my notification preferences?
+572,226488a12f680ee1f24a9f4a7e900079f77f8d10dc690e2e1be9bd8d66bdbebf,data-export,How do I export my data as a PDF?
+573,69bc9bf8b9717f046a26bff8e634a4fdd4491008a1c4586fe8e784c2849e762f,feature-help,Can you explain what HbA1c is in simple terms?
+574,1fb0beee8072bc983acd0b06fb25b5dd90d81347abafd87704a3394d150500dd,meal-content-request,Feature request: add a barcode scanner for foods.
+575,defaf3b8facc4d6a657f64abb68f10778a8d029399e4cfe676705abb31c6945c,edit-log-entry,How do I edit a wrong glucose entry?
+576,7e01fe7e80521ac8e6d50b49493fe05a42acad64228efdef34f1d7b62aa2df41,language-preference,Is there an Arabic/English language toggle?
+577,3c74d91ef32ec1558c4239766e3470f0e2cc6f471392d3171b87b35b2ab82783,positive-feedback,"Thanks, the app is improving a lot."
+578,e1bbde60bc121de21ed70efb05aa82ab03f053a7d8b3766629b2b150d288fe81,contact-help,How do I contact support by email?
+579,b9385ab1056c452011b6126e03311fac7b58ac6fd6f39e3abf5417eaf2c33d8a,support-test,Just testing support again.
+580,c8e02ea9c951b2474f0a489aec53656a746325fc6d5ff155bdbc5fcc5cdddbdc,booking-confirmation-missing,I got billed but I don’t see any appointment booked.
+581,246a2cb5d515bd6e504b1abec77e5361f1ae482b768b200f3c395ad265199892,cancel-refund,"Please refund me, I cancelled right away."
+582,698248db49f1029597b697e3e02397b875de9ebe9a8ce331b597fa45d3ccca4f,double-charge,My card shows two identical charges for one booking.
+583,f06af2b90de47562cd9f5f844b0a71a7ce92733522414bead14e5407cad645d2,invoice-details,The receipt doesn’t include tax details.
+584,1a66a06423852df998b86d1f597c45ca3bd955f697f0d8db740cd0df66d76701,currency-charge,I was charged in USD instead of CAD.
+585,a08040390f5f27d663abc9e59ff200dc82ea0ea54173f46e5a9a04a13e9ed5e5,subscription-renewal,Why was my subscription renewed automatically?
+586,d156a3de918569e9d10e44e49d7a5ef89eb29529fca916c8eb4d6104dde961b4,premium-access,I paid but premium features still say locked.
+587,5ab1776997f4a3982044d9b2026515c91ebb579bb83e2acc610d59c2f53a41d5,payment-state-error,Checkout failed but I see a pending charge.
+588,3f64f9c5cfd4fef8c8ef2087fb2f7ddbcea0f124431766c255184ea9fcf2caef,receipt-access,Can you send me the invoice again by email?
+589,9780acbf3a3bfd0a0199da2b27a15a6984ba60938404618eaaea3b41053c753d,promo-code,Is there a promo code for first-time users?
+590,a745d30b49d1b69fdf202f7377bba1f713c910733f0feae3b8cb7a32b4b8b3a9,page-loading,The app won’t let me open the Support chat.
+591,3c7fd409b3fc81ad1ab491188903a2e51783e0149e264c2a51050ae188770949,log-save-error,I keep getting ‘unexpected error’ when saving meals.
+592,f200a78b82b3bc530188190e52392bd8e9e4bb3ab12f810efbf6aaa2c9b13b31,login-session,Login keeps looping back to the code screen.
+593,26679f47a46b3f96f2c4dfd36de2fd64cabc41105010dbcf8d71c203c3b040b2,page-loading,My weekly summary card is missing.
+594,27d044dc2fa3ed286935a045553c4873bb6cfc22b59d93a94abb551f057172a5,page-loading,The tracker page loads forever.
+595,b88d5eae409d90353e9c45fefde0946ad85abb20ec2665f7ad88ef7b3ac96ab3,photo-upload,"I can’t upload my meal photo, it fails."
+596,9c386fe0e4398d6cf99439cc85ee108cfc5193a3558380ea7a41e26daaa8acd5,chat-controls,The send button is hidden by the keyboard.
+597,bbfd36555b7f37c1f2df829f7e713677b84a1976cb33cd7176b908e519e513e1,app-crash,It crashes when I tap Insights.
+598,75ef07de91005f9bbd86c6ca3b2ced60b0cd0c176a57bd9e42d39c5584f33429,calendar-dates,The app is showing wrong dates on the calendar.
+599,726c0ff6fa40a7e216c827f9ab0e0f10630a7d2e285f82616437a4d9590aee66,notification-preferences,My reminders toggles won’t stay on.
+600,1fe37c81fe97bb111458e0f77a8158033466ac14a5dd54b7d4645f28957c5805,booking-change,Can you move my booking from today to tomorrow?
+601,529a4ead105f4461163f925a9d7bf4aa7895aff43f7367bbc3481381beaf2fad,booking-change,I need to cancel my appointment ASAP.
+602,5ad4a20c1f1f628c923a2a2af69e950134fcf516ee88afb7fd32a56e7a2869fd,meeting-access,"I can’t find the meeting link, please resend."
+603,dbe34df465dc0bedabbed1b75602b53d500a734fe1983af83df0a708c6b38e1d,booking-availability,No time slots appear for this week.
+604,3a35fce6cc7e86dc864a4c544d09bf5fb98381fbeb05664d03368a0592b3c7c4,booking-availability,Can I book an appointment for next month?
+605,e8626f33364c2043415f9a34323c73801b9d500b1b58072cafb1c7601ee97e60,booking-availability,Do you have availability on Saturdays?
+606,fa2231950de73ffc602a53f27a97995a851b8a4a53005e7fe09b65271e265a03,booking-status-change,My appointment time changed—please confirm.
+607,d9a12d4228981ffaef70bab3ebf2932ee70d376f8e3011adf1f6de1f373c0da5,meeting-access,I joined the call and it kept disconnecting.
+608,0a87bfa4f3e224a86226f78a8cf497885450b63f5fd7819c623cb7e0dc038718,booking-confirmation,Can you confirm the doctor’s name for my booking?
+609,8b25a8aa1396667efdb46b96a2ef65167aec8583f87ddb045cf3f6952908e57e,booking-change,How do I reschedule without paying again?
+610,b7c138b036de13dc6f2241928c60d85918c1ba2442fc1e46eaec0ee918a2935e,low-glucose-symptoms,My glucose is very low and I feel dizzy.
+611,518df3410c6499d08fa890f5288d1402de790d68800bebc334ad04428af34df8,low-glucose-symptoms,"I’m shaking and sweating, might be a hypo."
+612,117e9160459fc93d277d5421210666e32ef1a3e7d0dcec96cf66694843b96ade,high-glucose-unwell,My sugar is extremely high and I feel sick.
+613,163bf0b4278cc2cac91419dc10ded09e2a1eb1adf84fad654990507b1aba4158,ketones,I have ketones and I can’t stop vomiting.
+614,fc6bc3c971e5d46c5236082151876d99dbe69f0f2c79725d24fbcc58e2df713a,chest-breathing-vision-headache,Chest pain and trouble breathing right now.
+615,78538cf369c2838e183cb7997af6b0ead7cdb34720c7a0da16481ba57dfcc3bc,fainting,I fainted earlier today.
+616,4d8b0a8c04f0c9afbf53a2e506f1ce7792ba43a7b52dae97b4b0205716fb1bfe,insulin-dose,I’m confused about insulin dosing tonight.
+617,3b7c3f6311e559c46bae3e45b06f683b3ecee0f2f7ad1b5a0fa9693d0aea50ff,persistent-meal-highs,I keep spiking after meals for days.
+618,7f6f2145d2949b91aa3d90dfd184a2fd36097df629546594a0923f5763695704,chest-breathing-vision-headache,Blurry vision with high sugar.
+619,5864877e16644926466ad3daf95802f07e464c51ce43b43fc97fadd19a047002,night-lows,I’m having repeated lows at night.
+620,e0c754bb3dbf311f4a13b5c5facf5914215d1ab03acc3f6842049b12b42855ac,glucose-units,Where do I change my units to mmol/L?
+621,969183bc21a72068a666a1f111dc9e8178a8b477eb86238fc4e2ca7394145c99,meal-content-request,Can you add more recipe options in meal plans?
+622,22598e1c49482bbb17b023f3bd533fd14dc8e51d0e476def7320c09b8c3e3b8a,data-export,How do I export my logs to share with my doctor?
+623,3a706cfec701155c3b948a756e342be523fcfc1bbaa754eb558b792df5778bcc,dark-mode,Feature request: add dark mode toggle.
+624,cf0eaa682d7381a181691b20cc9ebd48e1bb7da0365fe1a07f2adbd7d7e64ea3,settings-location,Where is the settings page?
+625,ea93d5d3594de6dc8fabde8ca88e5e786cd42a975e238905629aa99e14539d41,feature-help,Can you explain what fasting glucose means?
+626,44054ee3fa1a476f10f62fefef2f54ef09d9ef413552b100c29892b0bb324371,edit-log-entry,Can I delete a meal entry I logged wrong?
+627,14fa34efa5dbe28a53a0318231fb516e31a1565ee054eca23bc8dc5074c14c24,language-preference,Do you support Arabic + English switch?
+628,df3f60058280aef2aa7ff04a9c6edf9463e9145c204768dde40fa6afb91b5e5f,positive-feedback,"Thanks, support helped a lot."
+629,919ecf21c1f48d29e4e55c8e6b14552d503ac7360ae3b47756a9a0328dedf3d9,support-test,Testing support message.
