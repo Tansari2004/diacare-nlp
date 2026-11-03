@@ -50,3 +50,17 @@ def test_category_endpoint_rejects_invalid_input_and_unavailable_model(monkeypat
             assert client.post("/classify", json={"text": text}).status_code == 422
         monkeypatch.setattr(triage_api, "cat_model", None)
         assert client.post("/classify", json={"text": "A question"}).status_code == 503
+
+
+def test_category_startup_and_readiness_do_not_require_priority_artifact(monkeypatch):
+    model = FixedCategory(.9)
+    def load(path):
+        if path.name == 'category_model.joblib':
+            return model
+        raise FileNotFoundError('Legacy priority artifact deliberately absent')
+    monkeypatch.setattr(triage_api, '_load_joblib', load)
+    with TestClient(triage_api.app) as client:
+        assert client.get('/ready').status_code == 200
+        assert client.get('/ready').json()['legacy_priority_model_loaded'] is False
+        assert client.post('/classify', json={'text': 'A billing question'}).status_code == 200
+        assert client.post('/triage', json={'text': 'A billing question'}).status_code == 503

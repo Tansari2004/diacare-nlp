@@ -131,15 +131,18 @@ def _reason_phrases(model, text: str, top_k: int = 8) -> List[str]:
 
 def load_models():
     global cat_model, pri_model
+    # Category is the current service dependency. Keep legacy priority loading
+    # independent so a missing research artifact cannot disable /classify.
+    cat_model = None
+    pri_model = None
     try:
-        cat_path = BASE_DIR / "models" / "category_model.joblib"
-        pri_path = BASE_DIR / "models" / "priority_model.joblib"
-        cat_model = _load_joblib(cat_path)
-        pri_model = _load_joblib(pri_path)
+        cat_model = _load_joblib(BASE_DIR / "models" / "category_model.joblib")
     except Exception:
-        logger.exception("Unable to load trained model artifacts")
-        cat_model = None
-        pri_model = None
+        logger.exception("Unable to load category model artifact")
+    try:
+        pri_model = _load_joblib(BASE_DIR / "models" / "priority_model.joblib")
+    except Exception:
+        logger.exception("Unable to load legacy priority model artifact")
 
 
 @asynccontextmanager
@@ -180,15 +183,19 @@ def classify(req: TriageRequest):
 def health():
     return {
         "ok": True,
-        "api_version": "v3-grouped",
+        "api_version": "v4-category-review",
+        "category_model_loaded": cat_model is not None,
+        "legacy_priority_model_loaded": pri_model is not None,
         "models_loaded": bool(cat_model and pri_model),
     }
 
 @app.get("/ready")
 def ready():
-    if cat_model is None or pri_model is None:
-        raise HTTPException(status_code=503, detail="Models unavailable")
-    return {"ready": True, "models_loaded": True, "api_version": "v3-grouped"}
+    if cat_model is None:
+        raise HTTPException(status_code=503, detail="Category model unavailable")
+    return {"ready": True, "category_model_loaded": True,
+            "legacy_priority_model_loaded": pri_model is not None,
+            "api_version": "v4-category-review"}
 
 
 @app.post("/triage", deprecated=True)
