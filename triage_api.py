@@ -7,12 +7,16 @@ from typing import List, Optional
 import joblib
 import numpy as np
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 logger = logging.getLogger(__name__)
 
 class TriageRequest(BaseModel):
-    text: str
+    text: str = Field(max_length=5000)
+
+# Fixed engineering default, not selected for holdout accuracy or validated as
+# a confidence guarantee. Every message still needs manual priority review.
+CATEGORY_REVIEW_THRESHOLD = 0.60
 
 # simple safety gate (not medical advice)
 EMERGENCY_PATTERNS = [
@@ -146,6 +150,32 @@ async def lifespan(_app: FastAPI):
 
 app = FastAPI(title="DiaCare Support Triage API", lifespan=lifespan)
 
+
+@app.post("/classify")
+def classify(req: TriageRequest):
+    """Suggest a support topic; deliberately make no priority decision."""
+    if cat_model is None:
+        raise HTTPException(status_code=503, detail="Category model unavailable")
+    text = req.text.strip()
+    if not text:
+        raise HTTPException(status_code=422, detail="Message text must not be blank")
+    probabilities = cat_model.predict_proba([text])[0]
+    confidence = float(probabilities.max())
+    suggested = str(cat_model.classes_[int(np.argmax(probabilities))])
+    review = confidence < CATEGORY_REVIEW_THRESHOLD
+    return {
+        "suggested_category": suggested,
+        "category": None if review else suggested,
+        "category_confidence": confidence,
+        "category_decision": "needs_review" if review else "suggestion",
+        "review_threshold": CATEGORY_REVIEW_THRESHOLD,
+        "priority": None,
+        "priority_decision": "manual_review_required",
+        "human_review_required": True,
+        "reason_phrases": _reason_phrases(cat_model, text),
+        "scope": "Support-topic suggestion only; no urgency or clinical assessment.",
+    }
+
 @app.get("/health")
 def health():
     return {
@@ -161,7 +191,7 @@ def ready():
     return {"ready": True, "models_loaded": True, "api_version": "v3-grouped"}
 
 
-@app.post("/triage")
+@app.post("/triage", deprecated=True)
 def triage(req: TriageRequest):
     if cat_model is None or pri_model is None:
         raise HTTPException(status_code=503, detail="Models unavailable")

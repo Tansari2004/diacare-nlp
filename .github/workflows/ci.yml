@@ -25,7 +25,9 @@ jobs:
           pip install -r requirements.txt
 
       - name: Reproduce grouped training and HTTP evaluation
-        run: python train.py
+        run: |
+          python train.py
+          python evaluate_category.py
 
       - name: Run tests
         run: pytest -q
