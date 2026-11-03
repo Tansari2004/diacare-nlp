@@ -2,7 +2,23 @@
 
 [![CI](https://github.com/Tansari2004/diacare-nlp/actions/workflows/ci.yml/badge.svg)](https://github.com/Tansari2004/diacare-nlp/actions/workflows/ci.yml)
 
-A standalone prototype combining TF-IDF/linear SVM classifiers, a keyword override, and FastAPI. It suggests a support category and priority for human review. It is **not a medical device or a validated clinical triage service**.
+A standalone prototype combining TF-IDF/linear SVM classifiers, a keyword override, and FastAPI. The current `/classify` endpoint suggests a support category and leaves every priority decision to a person. The older `/triage` priority experiment is retained as a deprecated research endpoint. It is **not a medical device or a validated clinical triage service**.
+
+## Current scope: category suggestion, manual priority
+
+The weak priority results below led to a narrower interface, rather than more tuning on the observed holdout. `POST /classify` returns a category suggestion and a nullable category decision; **priority is always null and must be assigned by a person**. A fixed 0.60 model-score threshold sends uncertain category decisions to `needs_review`. This threshold is an engineering default, not a validated probability or a threshold optimized on the holdout. Even returned category suggestions require human review.
+
+On the same already observed 140-message synthetic holdout:
+
+| Category comparison | Correct / total | Accuracy |
+| --- | ---: | ---: |
+| Majority training category | 17 / 140 | 12.1% |
+| TF-IDF + Multinomial Naive Bayes | 104 / 140 | 74.3% |
+| Existing calibrated SVM, all suggestions | 108 / 140 | 77.1% |
+
+With the fixed review threshold, 98/140 messages receive a category suggestion (70% coverage): **83/98 are correct, with 15 errors**. The other 42 need category review; **all 140 need priority review**. The 84.7% accuracy among returned category decisions excludes abstentions and must never replace the 77.1% all-message accuracy. These checks do not establish savings in actual reviewer time or reliable clinical routing. Baselines were fitted on the same 490 training messages only; no parameters, rules or split were chosen from test scores.
+
+Run `python evaluate_category.py` after `python train.py`. Inspect [category metrics](results/category_only_metrics.json) and [per-message responses](results/category_only_predictions.csv). The old holdout is a retrospective diagnostic, not a fresh final test. A [next-evaluation protocol](data/NEXT_EVALUATION.md) records the remaining independent review and fresh-data requirements.
 
 ## Corrected evaluation
 
@@ -34,7 +50,7 @@ Family annotations were prepared with coding-assistant support and have not had 
 
 Each classifier learns its TF-IDF vocabulary within its training folds, preventing vocabulary leakage into the held-out folds. Sigmoid calibration wraps the full TF-IDF/SVM pipeline, using three family-disjoint folds of the training pool. Priority uses balanced class weights. Calibration does **not** by itself establish reliable confidence estimates; probability reliability has not been independently evaluated.
 
-`POST /triage` first checks the existing keyword patterns. A match returns `prediction_source: "keyword_rule"`, explicit `rule_matches`, category `medical`, and priority 5. **Both confidence fields are null**, because no model probability was computed. The phrase list is narrow and does not understand negation or all symptom paraphrases.
+**Deprecated experiment:** `POST /triage` first checks the existing keyword patterns. A match returns `prediction_source: "keyword_rule"`, explicit `rule_matches`, category `medical`, and priority 5. **Both confidence fields are null**, because no model probability was computed. The phrase list is narrow and does not understand negation or all symptom paraphrases.
 
 Otherwise, the models return separate `category_confidence` and `priority_confidence` values. A confident category cannot conceal an uncertain priority. These are model estimates, not probabilities of clinical safety. Indicative TF-IDF terms come from one member of each calibrated ensemble and are not a complete ensemble explanation.
 
@@ -54,7 +70,7 @@ Otherwise, the models return separate `category_confidence` and `priority_confid
 
 - `GET /health`: process liveness, with `models_loaded` reported separately.
 - `GET /ready`: **503** when either model is unavailable; **200** when both are loaded.
-- `POST /triage`: **503** if models are unavailable, including keyword paths; **422** for blank messages.
+- `POST /triage`: **503** if models are unavailable, including keyword paths; **422** for blank or over-5,000-character messages.
 - Docker health checks use `/ready`.
 
 ## Reproduce
@@ -66,6 +82,7 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python train.py
+python evaluate_category.py
 pytest -q
 uvicorn triage_api:app --reload
 ```
