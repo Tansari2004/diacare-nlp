@@ -68,9 +68,9 @@ Otherwise, the models return separate `category_confidence` and `priority_confid
 }
 ```
 
-- `GET /health`: process liveness, with `models_loaded` reported separately.
-- `GET /ready`: **503** when either model is unavailable; **200** when both are loaded.
-- `POST /triage`: **503** if models are unavailable, including keyword paths; **422** for blank or over-5,000-character messages.
+- `GET /health`: process liveness, with category and legacy-priority availability reported separately; the backward-compatible `models_loaded` field describes both artifacts together.
+- `GET /ready`: **503** when the category model is unavailable; **200** when it is loaded. The legacy priority artifact is reported separately and is not required by `/classify`.
+- `POST /triage`: **503** if either legacy model is unavailable, including keyword paths; **422** for blank or over-5,000-character messages.
 - Docker health checks use `/ready`.
 
 ## Reproduce
